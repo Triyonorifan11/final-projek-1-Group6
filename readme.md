@@ -1,5 +1,5 @@
-### Final Projek 1
+# Final Projek 1
 
-# Kelompok 6
+### Kelompok 6
 - Triyono Rifan
 - Moh Dodi Setyawan
