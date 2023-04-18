@@ -1,3 +1,6 @@
-h1{
-    font-size: 35px;
+body {
+    font-family: cursive;
+}
+.main-color {
+    background-color: darkblue;
 }
