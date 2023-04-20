@@ -1,3 +1,5 @@
+import { addClassElement } from '../../utils/functions';
+
 const Home = {
   async render() {
     return `
@@ -105,7 +107,7 @@ const Home = {
     document.querySelectorAll('.nav-link').forEach((link) => {
       link.classList.remove('active');
     });
-    document.querySelector('#home').classList.add('active');
+    addClassElement('#home', 'active');
     // Fungsi ini akan dipanggil setelah render()
   },
 };
