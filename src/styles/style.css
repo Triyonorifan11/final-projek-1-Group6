@@ -99,6 +99,21 @@ body{
     font-size: 50px;
 }
 
+
+/* Product */
+body .section-product{
+    padding-left: 5%;
+    padding-right: 5%;
+    min-height: 350px;
+}
+
+.jumbotron-product {
+    background-color: rgb(225, 225, 225); 
+    padding-left: 5%; 
+    padding-right: 5%;
+}
+
+
 /* Login register */
 .half-circle-left{
     border-radius: 50% 0 0 50%;
