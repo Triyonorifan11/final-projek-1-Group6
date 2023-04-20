@@ -46,6 +46,76 @@ const Home = {
       </div>
 
 
+      <section id="deskripsi" class="deskripsi section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg4-4 col-md-12 col-12">
+                    <div class="deskripsi-img">
+                        <img src="" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="deskripsi-text">
+                        <h2>We Product Best Quality</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad labore veniam reprehenderit error maxime eveniet rem porro in, doloremque repellat repudiandae sequi autem, deleniti et distinctio necessitatibus eius deserunt odio. Impedit molestias ea sunt, optio ratione laboriosam ipsam, quia corporis quisquam possimus inventore quidem quod. Magni facere neque totam ad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+
+      <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Our Services</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, amet nobis rerum harum numquam modi?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-subtract"></i>
+                            <h3 class="card-title">Best Quality</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est eum ad odit numquam reprehenderit officia cumque dolorum harum dignissimos dolor?</p>
+                            <button class="btn btn-warning text-dark">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-slack"></i>
+                            <h3 class="card-title">Sustainbility</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est eum ad odit numquam reprehenderit officia cumque dolorum harum dignissimos dolor?</p>
+                            <button class="btn btn-warning text-dark">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-playstation"></i>
+                            <h3 class="card-title">integrity</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est eum ad odit numquam reprehenderit officia cumque dolorum harum dignissimos dolor?</p>
+                            <button class="btn btn-warning text-dark">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+
       <section id="home-product" class="home-product section-padding center">
           <div class="container">
               <div class="row">
