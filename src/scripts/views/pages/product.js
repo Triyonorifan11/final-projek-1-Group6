@@ -1,3 +1,5 @@
+import { addClassElement } from '../../utils/functions';
+
 const Product = {
     async render() {
       return `
@@ -12,7 +14,11 @@ const Product = {
     },
   
     async afterRender() {
-      // Fungsi ini akan dipanggil setelah render()
+        document.querySelectorAll('.nav-link').forEach((link) => {
+            link.classList.remove('active');
+          });
+          addClassElement('#product', 'active');
+          // Fungsi ini akan dipanggil setelah render()
     },
   };
   

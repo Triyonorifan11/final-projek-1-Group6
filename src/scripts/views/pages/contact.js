@@ -1,3 +1,5 @@
+import { addClassElement } from '../../utils/functions';
+
 const Contact = {
     async render() {
       return `
@@ -56,7 +58,11 @@ const Contact = {
     },
   
     async afterRender() {
-      // Fungsi ini akan dipanggil setelah render()
+        document.querySelectorAll('.nav-link').forEach((link) => {
+            link.classList.remove('active');
+          });
+          addClassElement('#contact', 'active');
+          // Fungsi ini akan dipanggil setelah render()
     },
   };
   
