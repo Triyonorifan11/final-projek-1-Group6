@@ -4,7 +4,7 @@ const Login = {
   async render() {
     return `
     <section id="login" style="overflow-x:hidden">
-     <div class="row mb-5">
+     <div class="row my-5">
        <div class="col-md-6" style="height: 100vh">
          <div class="d-flex justify-content-center pt-5 align-items-center">
             <h1 class="font-bold text-warning py-4">Login!</h1>
