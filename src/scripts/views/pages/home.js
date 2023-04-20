@@ -68,8 +68,7 @@ const Home = {
                           </div>
                       </div>
                   </div>
-              </div>
-              <div class="row">
+
                   <div class="col-12 col-md-12 col-lg-4">
                       <div class="card text-light text-center bg-white pb-2">
                           <div class="card-body text-dark">
@@ -82,8 +81,7 @@ const Home = {
                           </div>
                       </div>
                   </div>
-              </div>
-              <div class="row">
+
                   <div class="col-12 col-md-12 col-lg-4">
                       <div class="card text-light text-center bg-white pb-2">
                           <div class="card-body text-dark">
@@ -97,12 +95,17 @@ const Home = {
                       </div>
                   </div>
               </div>
+              
           </div>
       </section>
       `;
   },
 
   async afterRender() {
+    document.querySelectorAll('.nav-link').forEach((link) => {
+      link.classList.remove('active');
+    });
+    document.querySelector('#home').classList.add('active');
     // Fungsi ini akan dipanggil setelah render()
   },
 };
