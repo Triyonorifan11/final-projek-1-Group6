@@ -63,11 +63,11 @@ body{
     padding: 100px 0;
 }
 .carousel-item{
-    height: 100vh;
+    height: 70vh;
     min-height: 300px;
 }
 .corousel-caption{
-    bottom: 300px;
+
     z-index: 2;
 }
 .carousel-caption h5{
@@ -82,7 +82,7 @@ body{
     font-size: 15px;
     line-height: 1.9;
 }
-/* .carousel-inner::before{
+.carousel-inner::before{
     content: '';
     position: absolute;
     width: 100px;
@@ -91,7 +91,7 @@ body{
     left: 0;
     background: rgba(0,0,0,0.7);
     z-index: 1;
-} */
+}
 
 /* Login register */
 .half-circle-left{
