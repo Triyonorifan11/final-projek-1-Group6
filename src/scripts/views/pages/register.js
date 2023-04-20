@@ -1,3 +1,5 @@
+import registerAkun from '../../utils/registerAkun';
+
 const Register = {
   async render() {
     return `
@@ -13,7 +15,7 @@ const Register = {
            <div class="text-center login-view">
               <h5>Register untuk daftar akun Anda disini</h5>
               <div class"mt-5 pt-5">
-                <button type="button" class="btn btn-danger btn-lg mt-5"><i class="bi bi-google mr-3"></i> Login With Google</button>
+                <button type="button" class="btn btn-danger btn-lg mt-5" id="btn-register"><i class="bi bi-google mr-3"></i> Register With Google</button>
               </div>
   
               <div class="d-flex justify-content-center pt-5 align-items-center">
@@ -31,7 +33,12 @@ const Register = {
       link.classList.remove('active');
     });
     document.querySelector('#login').classList.add('active');
-    // Fungsi ini akan dipanggil setelah render()
+
+    const btnregister = document.getElementById('btn-register');
+    btnregister.addEventListener('click', async (e) => {
+      e.preventDefault();
+      await registerAkun.init();
+    });
   },
 };
 
