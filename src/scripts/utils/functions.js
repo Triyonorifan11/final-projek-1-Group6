@@ -80,6 +80,26 @@ function formatRupiah(angka) {
   return rupiah;
 }
 
+function addClassElement(element, className) {
+  document.querySelector(element).classList.add(className);
+}
+function removeClassElement(element, className) {
+  document.querySelector(element).classList.remove(className);
+}
+function innerElement(idOrClass, element) {
+  document.querySelector(idOrClass).innerHTML = element;
+}
+
 export {
-  isLogin, getUserInfo, escapeHtml, redirect, uploadFile, formatDate, formatRupiah, flassMesagge,
+  isLogin,
+  getUserInfo,
+  escapeHtml,
+  redirect,
+  uploadFile,
+  formatDate,
+  formatRupiah,
+  flassMesagge,
+  addClassElement,
+  removeClassElement,
+  innerElement,
 };

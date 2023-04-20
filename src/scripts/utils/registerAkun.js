@@ -1,7 +1,7 @@
 import { getFirestore } from 'firebase/firestore';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../global/config';
-import { flassMesagge } from './functions';
+import { addClassElement, flassMesagge, innerElement } from './functions';
 
 // initioalisasi
 const provider = new GoogleAuthProvider();
@@ -15,6 +15,8 @@ const registerAkun = {
 
   async _registerMethod() {
     const auth = getAuth();
+    addClassElement('#btn-register', 'disabled');
+    innerElement('#btn-register', '<i class="bi bi-google mr-3"></i> Mohon Tunggu');
     signInWithPopup(auth, provider)
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access Google APIs.

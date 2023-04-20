@@ -1,3 +1,4 @@
+import { addClassElement } from '../../utils/functions';
 import registerAkun from '../../utils/registerAkun';
 
 const Register = {
@@ -32,7 +33,8 @@ const Register = {
     document.querySelectorAll('.nav-link').forEach((link) => {
       link.classList.remove('active');
     });
-    document.querySelector('#login').classList.add('active');
+
+    addClassElement('#login', 'active');
 
     const btnregister = document.getElementById('btn-register');
     btnregister.addEventListener('click', async (e) => {
