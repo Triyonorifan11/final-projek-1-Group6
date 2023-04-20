@@ -5,8 +5,8 @@ const Register = {
   async render() {
     return `
       <section id="login" style="overflow-x:hidden">
-       <div class="row mb-5">
-       <div class="col-md-6 d-md-block d-none">
+       <div class="row my-5">
+         <div class="col-md-6 d-md-block d-none">
            <img src="/img/home/3.jpg" class="d-block half-circle-right" width="100%" height="100%" alt="...">
          </div>
          <div class="col-md-6" style="height: 100vh">
