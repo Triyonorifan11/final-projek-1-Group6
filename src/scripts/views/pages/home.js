@@ -65,7 +65,7 @@ const Home = {
       </section>
 
 
-      <section id="services" class="services section-padding">
+      <section id="services" class="services section-padding center">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -117,7 +117,7 @@ const Home = {
 
 
       <section id="home-product" class="home-product section-padding center">
-          <div class="container">
+          <div class="container text-center">
               <div class="row">
                   <div class="col-md-12">
                       <div class="section-header pb-5">
@@ -132,7 +132,20 @@ const Home = {
                       <div class="card text-light text-center bg-white pb-2">
                           <div class="card-body text-dark">
                               <div class="img-area mb-4">
-                                  <img src="" alt="" class="img-fluid">
+                                  <img src="/img/home/baju.jpg" alt="" class="img-fluid">
+                              </div>
+                              <h3 class="card-title">Kaos</h3>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in nulla possimus debitis quis ab amet omnis aspernatur aliquid hic?</p>
+                              <button class="btn bg-warning text-dark">Kunjungi</button>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-12 col-md-12 col-lg-4">
+                      <div class="card text-light text-center bg-white pb-2">
+                          <div class="card-body text-dark">
+                              <div class="img-area mb-4">
+                                  <img src="/img/home/celana.jpg" alt="" class="img-fluid">
                               </div>
                               <h3 class="card-title">Celana</h3>
                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in nulla possimus debitis quis ab amet omnis aspernatur aliquid hic?</p>
@@ -145,20 +158,7 @@ const Home = {
                       <div class="card text-light text-center bg-white pb-2">
                           <div class="card-body text-dark">
                               <div class="img-area mb-4">
-                                  <img src="" alt="" class="img-fluid">
-                              </div>
-                              <h3 class="card-title">Baju</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in nulla possimus debitis quis ab amet omnis aspernatur aliquid hic?</p>
-                              <button class="btn bg-warning text-dark">Kunjungi</button>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-12 col-md-12 col-lg-4">
-                      <div class="card text-light text-center bg-white pb-2">
-                          <div class="card-body text-dark">
-                              <div class="img-area mb-4">
-                                  <img src="" alt="" class="img-fluid">
+                                  <img src="/img/home/jaket.jpg" alt="" class="img-fluid">
                               </div>
                               <h3 class="card-title">Jaket</h3>
                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in nulla possimus debitis quis ab amet omnis aspernatur aliquid hic?</p>
