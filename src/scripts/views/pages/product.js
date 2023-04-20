@@ -89,38 +89,8 @@ const Product = {
                             </div>
                         </div>
                     </div>
-                    <div class="col-md">
-                        <div class="card">
-                            <img src="" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsa</h5>
-                                    <small>2 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Rp.....</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="row mb-4">
-                    <div class="col-md">
-                        <div class="card">
-                            <img src="" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">gfjhgk</h5>
-                                    <small>1 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Rp.....</p>
-                                   <small>Lorem ipsum dolor sit amet consectetur. Consequatur.</small>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-md">
                         <div class="card">
                             <img src="" class="card-img-top" alt="...">
@@ -204,21 +174,6 @@ const Product = {
                             <div class="card-body">
                                 <a href="#" class="list-group-item list-group-item-action active">
                                     <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">gfjhgk</h5>
-                                    <small>1 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Rp.....</p>
-                                   <small>Lorem ipsum dolor sit amet consectetur. Consequatur.</small>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="card">
-                            <img src="" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
                                     <h5 class="mb-1">iugiuwdhyda</h5>
                                     <small>3 days ago</small>
                                     </div>
@@ -296,21 +251,6 @@ const Product = {
                             <div class="card-body">
                                 <a href="#" class="list-group-item list-group-item-action active">
                                     <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">gfjhgk</h5>
-                                    <small>1 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Rp.....</p>
-                                   <small>Lorem ipsum dolor sit amet consectetur. Consequatur.</small>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="card">
-                            <img src="" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
                                     <h5 class="mb-1">iugiuwdhyda</h5>
                                     <small>3 days ago</small>
                                     </div>
@@ -382,21 +322,6 @@ const Product = {
                     </div>
                 </div>
                 <div class="row mb-4">
-                    <div class="col-md">
-                        <div class="card">
-                            <img src="" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">gfjhgk</h5>
-                                    <small>1 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Rp.....</p>
-                                   <small>Lorem ipsum dolor sit amet consectetur. Consequatur.</small>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-md">
                         <div class="card">
                             <img src="" class="card-img-top" alt="...">
