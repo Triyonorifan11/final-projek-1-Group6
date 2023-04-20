@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "firebase": "^9.19.1",
+    "nanoid": "^4.0.2",
     "regenerator-runtime": "^0.13.11",
     "sweetalert2": "^11.7.3"
   }
