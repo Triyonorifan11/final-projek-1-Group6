@@ -2,7 +2,7 @@ import 'regenerator-runtime';
 import '../styles/style.css';
 import App from './views/app';
 import {
-  addClassElement, getUserInfo, innerElement, redirect, removeClassElement,
+  addClassElement, getUserInfo, innerElement, removeClassElement,
 } from './utils/functions';
 
 const app = new App({
