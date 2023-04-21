@@ -37,7 +37,7 @@ function escapeHtml(text) {
 function redirect(page) {
   setTimeout(() => {
     window.location.href = `./${page}`;
-  }, 2000);
+  }, 500);
 }
 function getFilename(file, name) {
   const extension = file.name.substring(file.name.lastIndexOf('.') + 1);
