@@ -1,4 +1,4 @@
-import { addClassElement } from '../../utils/functions';
+import { addClassElement, getUserInfo, redirect } from '../../utils/functions';
 import registerAkun from '../../utils/registerAkun';
 
 const Register = {
@@ -30,6 +30,10 @@ const Register = {
   },
 
   async afterRender() {
+    const userAccess = getUserInfo();
+    if (userAccess) {
+      redirect('#/');
+    }
     document.querySelectorAll('.nav-link').forEach((link) => {
       link.classList.remove('active');
     });
