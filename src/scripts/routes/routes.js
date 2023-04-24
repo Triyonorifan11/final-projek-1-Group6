@@ -4,6 +4,8 @@ import Login from '../views/pages/login';
 import Register from '../views/pages/register';
 import Contact from '../views/pages/contact';
 import Product from '../views/pages/product';
+import Dashboard from '../views/pages/dashboard';
+import adminProduk from '../views/pages/admin-product';
 
 const routes = {
   '/': Home, // default page
@@ -12,6 +14,8 @@ const routes = {
   '/register': Register,
   '/contact': Contact,
   '/product': Product,
+  '/dashboard': Dashboard,
+  '/my-product': adminProduk,
 };
 
 export default routes;

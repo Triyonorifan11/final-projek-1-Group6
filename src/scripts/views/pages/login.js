@@ -1,4 +1,5 @@
-import { addClassElement } from '../../utils/functions';
+import { addClassElement, getUserInfo, redirect } from '../../utils/functions';
+import loginAkun from '../../utils/loginAkun';
 
 const Login = {
   async render() {
@@ -12,7 +13,7 @@ const Login = {
          <div class="text-center login-view">
             <h5>Login untuk masuk ke akun Anda disini</h5>
             <div class"mt-5 pt-5">
-              <button type="button" class="btn btn-danger btn-lg mt-5"><i class="bi bi-google mr-3"></i> Login With Google</button>
+              <button type="button" class="btn btn-danger btn-lg mt-5" id="btn-login"><i class="bi bi-google mr-3"></i> Login With Google</button>
             </div>
 
             <div class="d-flex justify-content-center pt-5 align-items-center">
@@ -29,11 +30,21 @@ const Login = {
   },
 
   async afterRender() {
+    const userAccess = getUserInfo();
+    if (userAccess) {
+      redirect('#/');
+    }
     document.querySelectorAll('.nav-link').forEach((link) => {
       link.classList.remove('active');
     });
     addClassElement('#login', 'active');
+
     // Fungsi ini akan dipanggil setelah render()
+    const btnLogin = document.getElementById('btn-login');
+    btnLogin.addEventListener('click', async (e) => {
+      e.preventDefault();
+      await loginAkun.init();
+    });
   },
 };
 
