@@ -91,14 +91,17 @@ const formProduk = {
     if (userAccess) {
       if (userAccess.role !== 'admin') {
         redirect('#/');
+      } else {
+        const updateby = document.querySelector('#update_by');
+        const updateat = document.querySelector('#update_at');
+        updateby.innerHTML = userAccess.nama_user;
+        updateat.innerHTML = formatDate(new Date());
+        // Fungsi ini akan dipanggil setelah render()
+        await addProduk.init();
       }
+    } else {
+      redirect('#/');
     }
-    const updateby = document.querySelector('#update_by');
-    const updateat = document.querySelector('#update_at');
-    updateby.innerHTML = userAccess.nama_user;
-    updateat.innerHTML = formatDate(new Date());
-    // Fungsi ini akan dipanggil setelah render()
-    await addProduk.init();
   },
 };
 

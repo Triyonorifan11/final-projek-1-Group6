@@ -25,7 +25,7 @@ const editProduk = {
                                 
                             </form>
                             <div>
-                                <p>Dibuat oleh <span id="update_by" class="text-warning"></span>, at <span id="update_at"></span></p>
+                                <p>Diedit oleh <span id="update_by" class="text-warning"></span>, at <span id="update_at"></span></p>
                             </div>
                         </div>
                     </div>
@@ -42,22 +42,25 @@ const editProduk = {
     if (userAccess) {
       if (userAccess.role !== 'admin') {
         redirect('#/');
+      } else {
+        const updateby = document.querySelector('#update_by');
+        const updateat = document.querySelector('#update_at');
+        const formEdit = document.getElementById('edit-produk');
+        formEdit.innerHTML = loader();
+
+        const url = UrlParser.parseActiveUrlWithoutCombiner();
+
+        // Fungsi ini akan dipanggil setelah render()
+        const dataProdukById = await editProduct.init(url.id);
+        updateby.innerHTML = dataProdukById.update_by;
+        updateat.innerHTML = formatDate(dataProdukById.update_at);
+        dataProdukById.id = url.id;
+        formEdit.innerHTML = formEditProduk(dataProdukById);
+        await editProduct.updateDataProduk(dataProdukById);
       }
+    } else {
+      redirect('#/');
     }
-    const updateby = document.querySelector('#update_by');
-    const updateat = document.querySelector('#update_at');
-    const formEdit = document.getElementById('edit-produk');
-    formEdit.innerHTML = loader();
-
-    const url = UrlParser.parseActiveUrlWithoutCombiner();
-
-    // Fungsi ini akan dipanggil setelah render()
-    const dataProdukById = await editProduct.init(url.id);
-    updateby.innerHTML = dataProdukById.update_by;
-    updateat.innerHTML = formatDate(dataProdukById.update_at);
-    dataProdukById.id = url.id;
-    formEdit.innerHTML = formEditProduk(dataProdukById);
-    await editProduct.updateDataProduk(dataProdukById);
   },
 };
 

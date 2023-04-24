@@ -70,12 +70,15 @@ const Dashboard = {
     if (userAccess) {
       if (userAccess.role !== 'admin') {
         redirect('#/');
+      } else {
+        document.querySelectorAll('.aside-link').forEach((link) => {
+          link.classList.remove('btn-warning');
+        });
+        addClassElement('#dashboard', 'btn-warning');
       }
+    } else {
+      redirect('#/');
     }
-    document.querySelectorAll('.aside-link').forEach((link) => {
-      link.classList.remove('btn-warning');
-    });
-    addClassElement('#dashboard', 'btn-warning');
   },
 };
 

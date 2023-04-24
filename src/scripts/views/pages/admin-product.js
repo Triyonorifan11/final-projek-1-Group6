@@ -51,35 +51,39 @@ const adminProduk = {
 
   async afterRender() {
     const userAccess = getUserInfo();
+    console.log(userAccess);
     if (userAccess) {
       if (userAccess.role !== 'admin') {
         redirect('#/');
-      }
-    }
-    document.querySelectorAll('.aside-link').forEach((link) => {
-      link.classList.remove('btn-warning');
-    });
-    addClassElement('#myProduct', 'btn-warning');
-    const loading = document.getElementById('loading');
-    loading.innerHTML = loader();
-    const dataAllProduk = await readDataProduk.init();
-    const tbdataProduk = document.getElementById('dataAll');
-    let i = 0;
-    dataAllProduk.forEach((doc) => {
-      const resultData = doc.data();
-      resultData.id = doc.id;
-      i += 1;
-      tbdataProduk.innerHTML += trDataProduk(resultData, i);
-    });
-    loading.innerHTML = '';
+      } else {
+        document.querySelectorAll('.aside-link').forEach((link) => {
+          link.classList.remove('btn-warning');
+        });
+        addClassElement('#myProduct', 'btn-warning');
+        const loading = document.getElementById('loading');
+        loading.innerHTML = loader();
+        const dataAllProduk = await readDataProduk.init();
+        const tbdataProduk = document.getElementById('dataAll');
+        let i = 0;
+        dataAllProduk.forEach((doc) => {
+          const resultData = doc.data();
+          resultData.id = doc.id;
+          i += 1;
+          tbdataProduk.innerHTML += trDataProduk(resultData, i);
+        });
+        loading.innerHTML = '';
 
-    $('#data-produk').DataTable({
-      lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, 'All']],
-      columnDefs: [{
-        targets: 'no-sort',
-        orderable: false,
-      }],
-    });
+        $('#data-produk').DataTable({
+          lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, 'All']],
+          columnDefs: [{
+            targets: 'no-sort',
+            orderable: false,
+          }],
+        });
+      }
+    } else {
+      redirect('#/');
+    }
   },
 };
 
