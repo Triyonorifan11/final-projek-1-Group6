@@ -1,5 +1,5 @@
 import {
-  query, where, collection, getFirestore, getDocs, doc, getDoc,
+  query, collection, getFirestore, getDocs, orderBy,
 } from 'firebase/firestore';
 import app from '../global/config';
 
@@ -9,7 +9,7 @@ const readDataProduk = {
     return this._fetchAllDataProduct();
   },
   async _fetchAllDataProduct() { // digunakan untuk get all product
-    const q = query(collection(db, 'products'));
+    const q = query(collection(db, 'products'), orderBy('update_at', 'desc'));
     const docSnap = await getDocs(q);
     return docSnap;
   },

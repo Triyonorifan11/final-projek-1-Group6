@@ -1,6 +1,7 @@
 import { customAlphabet } from 'nanoid';
 import { doc, getFirestore, setDoc } from 'firebase/firestore';
 import {
+  escapeHtml,
   flassMesagge, getUserInfo, redirect, uploadFile,
 } from './functions';
 import app from '../global/config';
@@ -32,7 +33,11 @@ const addProduk = {
       const mydataForm = new FormData(e.target);
       const dataNewProduk = {};
       mydataForm.forEach((value, key) => {
-        (dataNewProduk[key] = value);
+        if (key === 'gambar_produk') {
+          (dataNewProduk[key] = value);
+        } else {
+          (dataNewProduk[key] = escapeHtml(value.toString()));
+        }
       });
       const nanoid = customAlphabet('1234567890abcdefghjiklmnopqrstuvwxyz', 19);
       const idProduk = `product_${nanoid()}`;
@@ -48,9 +53,9 @@ const addProduk = {
     const userAccess = getUserInfo();
     try {
       const dataNew = data;
-      dataNew.create_at = date;
+      dataNew.create_at = date.toISOString();
       dataNew.create_by = userAccess.nama_user;
-      dataNew.update_at = date;
+      dataNew.update_at = date.toISOString();
       dataNew.update_by = userAccess.nama_user;
       delete dataNew.gambar_produk;
       await setDoc(doc(db, 'products', id), dataNew);
