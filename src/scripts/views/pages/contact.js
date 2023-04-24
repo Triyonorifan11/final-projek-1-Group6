@@ -46,7 +46,7 @@ const Contact = {
                                 <textarea name="pesan" id="pesan" class="form-control"></textarea>
                             </div>
                             <div class="form-group pt-3">
-                                <button type="button" class="btn btn-primary">Kirim Pesan!</button>
+                                <button type="button" class="btn btn-dark">Kirim Pesan!</button>
                             </div>
                         </form>
                     </div>
