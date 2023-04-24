@@ -11,7 +11,6 @@ const Product = {
                 <a class="btn btn-dark btn-lg" href="#" role="button">Mulai Belanja</a>
             </div>
 
-            
 
             <section id="product" class="product section-product bg-secondary pb-4 pt-5">
                 <div class="row mb-4">
