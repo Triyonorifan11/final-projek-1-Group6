@@ -7,6 +7,7 @@ import Product from '../views/pages/product';
 import Dashboard from '../views/pages/dashboard';
 import adminProduk from '../views/pages/admin-product';
 import formProduk from '../views/pages/form-produk';
+import About from '../views/pages/about';
 
 const routes = {
   '/': Home, // default page
@@ -18,6 +19,7 @@ const routes = {
   '/dashboard': Dashboard,
   '/my-product': adminProduk,
   '/form-produk': formProduk,
+  '/about': About,
 };
 
 export default routes;
