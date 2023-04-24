@@ -1,5 +1,6 @@
 import 'regenerator-runtime';
 import '../styles/style.css';
+import './utils/asideElement';
 import App from './views/app';
 import {
   addClassElement, getUserInfo, innerElement, removeClassElement,
