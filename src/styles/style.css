@@ -1,67 +1,58 @@
-* {
+*{
     font-family: cursive;
 }
-
-body {
-    background: #f1fbff;
+body{
+    background: rgb(225, 225, 225);
 }
 
 /* Navbar */
-.navbar-nav a {
+.navbar-nav a{
     font-size: 15px;
     font-weight: 500;
 }
-
-.navbar-dark .navbar-brand {
+.navbar-dark .navbar-brand{
     font-size: 25px;
     text-transform: 700;
     letter-spacing: 2px;
 }
-
 .navbar-dark .navbar-brand:focus,
-.navbar-dark .navbar-brand:hover {
+.navbar-dark .navbar-brand:hover{
     color: #000;
 }
-
-.w-100 {
+.w-100{
     height: 100vh;
 }
 
 /* Footer */
-.content-suport {
-    background-color: rgba(0, 0, 0, 0.7);
+.content-suport{
+    background-color: rgba(0,0,0,0.7);
 }
 
 
 /* Responsive css */
-@media only screen and (min-width) and (max-width: 991px) {
-    .carousel-caption {
+@media only screen and (min-width) and (max-width: 991px){
+    .carousel-caption{
         bottom: 370px;
     }
-
-    .carousel-caption p {
+    .carousel-caption p{
         width: 100%;
     }
 }
 
-@media only screen and (max-width: 767px) {
-    .navbar-nav {
+@media only screen and (max-width: 767px){
+    .navbar-nav{
         text-align: center;
     }
-
-    .carousel-caption {
+    .carousel-caption{
         bottom: 125px;
     }
-
-    .carousel-caption h5 {
+    .carousel-caption h5{
         font-size: 17px;
     }
-
-    .carousel-caption a {
+    .carousel-caption a{
         padding: 10px 15px;
     }
-
-    .carousel-caption p {
+    .carousel-caption p{
         width: 100%;
         line-height: 1.6;
         font-size: 12px;
@@ -71,34 +62,31 @@ body {
 
 /* Home */
 .section-padding {
-    padding: 100px 0;
+    padding: 50px 0;
 }
-
-.carousel-item {
-    height: 70vh;
+.carousel-item{
+    height: 60vh;
     min-height: 300px;
 }
-
-.corousel-caption {
+.corousel-caption{
     bottom: 300px;
     z-index: 2;
 }
-
-.carousel-caption h5 {
+.carousel-caption h5{
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 25px;
+    color: #ffc107;
+    text-shadow: 2px 2px 4px black;
 }
-
-.carousel-caption p {
+.carousel-caption p{
     width: 60%;
     margin: auto;
     font-size: 15px;
     line-height: 1.9;
 }
-
-.carousel-inner::before {
+/* .carousel-inner::before{
     content: ' ';
     position: absolute;
     width: 100%;
@@ -107,42 +95,50 @@ body {
     left: 0;
     background: rgba(24, 24, 24, 0.7);
     z-index: 1;
+} */
+
+.hovered-card{
+    transition: .3s;
+}
+.hovered-card:hover{
+    transform: scale(1.1);
 }
 
-.services .card-body i {
-    font-size: 50px;
+.icon-services{
+    width: 90px;
+    height: 90px;
+    border: solid #fff 2px;
+    border-radius: 50px;
+    color: white;
 }
-
 
 /* Product */
-body .section-product {
+body .section-product{
     padding-left: 5%;
     padding-right: 5%;
     min-height: 350px;
 }
 
 .jumbotron-product {
-    background-color: rgb(225, 225, 225);
-    padding-left: 5%;
+    background-color: rgb(225, 225, 225); 
+    padding-left: 5%; 
     padding-right: 5%;
 }
 
 
 /* Login register */
-.half-circle-left {
+.half-circle-left{
     border-radius: 50% 0 0 50%;
     height: 100vh;
     object-fit: cover;
 }
-
-.half-circle-right {
+.half-circle-right{
     border-radius: 0 50% 50% 0;
     height: 100vh;
     object-fit: cover;
 }
 
 /* pagination table */
-.dataTables_wrapper .dataTables_paginate .paginate_button:active {
-    background: none;
-    color: #ffc107 !important;
+#data-produk_paginate ul.pagination li.paginate_button.page-item.active{
+    background-color: #ffc107;
 }
