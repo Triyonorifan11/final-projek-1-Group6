@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 import { addClassElement, getUserInfo, redirect } from '../../utils/functions';
+import loader from '../../utils/loader';
 import readDataProduk from '../../utils/readProduk';
+import { trDataProduk } from '../../utils/template';
 
 const adminProduk = {
   async render() {
@@ -10,7 +12,7 @@ const adminProduk = {
         <div class="col-md-3 col-sm-1 col-1 p-5">
             <aside-element></aside-element>
         </div>
-        <div class="col-md-9 col-sm-11 col-11 p-5 border-start border-secondary" style="height: 100vh">
+        <div class="col-md-9 col-sm-11 col-11 p-5 border-start border-secondary">
             <div class="d-flex justify-content-between">
                 <h3>Daftar Produk</h3>
                 <a class="btn btn-warning" href="#/form-produk" role="button">Create New</a>
@@ -24,7 +26,7 @@ const adminProduk = {
                                     <thead class="table-dark">
                                         <tr>
                                             <th scope="col">No</th>
-                                            <th scope="col">Gambar</th>
+                                            <th scope="col" class="no-sort">Gambar</th>
                                             <th scope="col">Nama Produk</th>
                                             <th scope="col">Diperbarui Pada</th>
                                             <th scope="col">Harga</th>
@@ -32,9 +34,10 @@ const adminProduk = {
                                             <th scope="col" class="no-sort">Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="data-produk">
+                                    <tbody id="dataAll">
                                     </tbody>
                                 </table>
+                                <div id="loading"></div>
                             </div>
                         </div>
                     </div>
@@ -57,28 +60,21 @@ const adminProduk = {
       link.classList.remove('btn-warning');
     });
     addClassElement('#myProduct', 'btn-warning');
-
+    const loading = document.getElementById('loading');
+    loading.innerHTML = loader();
     const dataAllProduk = await readDataProduk.init();
-    const tbdataProduk = document.getElementById('data-produk');
-    console.log(dataAllProduk);
+    const tbdataProduk = document.getElementById('dataAll');
     let i = 0;
     dataAllProduk.forEach((doc) => {
       const resultData = doc.data();
       resultData.id = doc.id;
-      tbdataProduk.innerHTML = `
-        <tr>
-            <th scope="row">${i}</th>
-            <td>${resultData.foto_produk}</td>
-            <td>${resultData.nama_produk}</td>
-            <td>${resultData.update_at}</td>
-            <td>${resultData.harga_produk}</td>
-            <td>${resultData.stok}</td>
-            <td>Edit</td>
-        </tr>
-      `;
+      i += 1;
+      tbdataProduk.innerHTML += trDataProduk(resultData, i);
     });
+    loading.innerHTML = '';
 
     $('#data-produk').DataTable({
+      lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, 'All']],
       columnDefs: [{
         targets: 'no-sort',
         orderable: false,

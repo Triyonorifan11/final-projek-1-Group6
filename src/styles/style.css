@@ -146,3 +146,28 @@ body .section-product{
 #data-produk_paginate ul.pagination li.paginate_button.page-item.active{
     background-color: #ffc107;
 }
+
+
+/* edit produk */
+.cover-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: ease-in;
+    cursor: pointer;
+}
+
+.text-cover{
+    color: #fff;
+}
+
+.cover-img:hover{
+    animation: 3s ease-in 1s;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.7);
+}
