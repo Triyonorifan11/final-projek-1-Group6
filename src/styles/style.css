@@ -125,3 +125,8 @@ body .section-product{
     height: 100vh;
     object-fit: cover;
 }
+
+/* pagination table */
+#data-produk_paginate ul.pagination li.paginate_button.page-item.active{
+    background-color: #ffc107;
+}
