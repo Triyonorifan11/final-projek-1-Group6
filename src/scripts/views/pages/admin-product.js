@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 import { addClassElement, getUserInfo, redirect } from '../../utils/functions';
+import readDataProduk from '../../utils/readProduk';
 
 const adminProduk = {
   async render() {
@@ -10,34 +11,28 @@ const adminProduk = {
             <aside-element></aside-element>
         </div>
         <div class="col-md-9 col-sm-11 col-11 p-5 border-start border-secondary" style="height: 100vh">
-            <h1>Daftar Produk</h1>
+            <div class="d-flex justify-content-between">
+                <h3>Daftar Produk</h3>
+                <a class="btn btn-warning" href="#/form-produk" role="button">Create New</a>
+            </div>
             <div class="row py-3">
                 <div class="col-12">
                     <div class="card shadow border-0">
                         <div class="card-body">
                             <div class="table-responsive px-2 py-4">
-                                <table class="table" id="data-produk">
-                                    <thead>
+                                <table class="table table-hover table-striped table-sm" id="data-produk">
+                                    <thead class="table-dark">
                                         <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">First</th>
-                                            <th scope="col">Last</th>
-                                            <th scope="col" class="no-sort">Handle</th>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Gambar</th>
+                                            <th scope="col">Nama Produk</th>
+                                            <th scope="col">Diperbarui Pada</th>
+                                            <th scope="col">Harga</th>
+                                            <th scope="col">Stok</th>
+                                            <th scope="col" class="no-sort">Action</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                        </tr>
+                                    <tbody id="data-produk">
                                     </tbody>
                                 </table>
                             </div>
@@ -62,6 +57,26 @@ const adminProduk = {
       link.classList.remove('btn-warning');
     });
     addClassElement('#myProduct', 'btn-warning');
+
+    const dataAllProduk = await readDataProduk.init();
+    const tbdataProduk = document.getElementById('data-produk');
+    console.log(dataAllProduk);
+    let i = 0;
+    dataAllProduk.forEach((doc) => {
+      const resultData = doc.data();
+      resultData.id = doc.id;
+      tbdataProduk.innerHTML = `
+        <tr>
+            <th scope="row">${i}</th>
+            <td>${resultData.foto_produk}</td>
+            <td>${resultData.nama_produk}</td>
+            <td>${resultData.update_at}</td>
+            <td>${resultData.harga_produk}</td>
+            <td>${resultData.stok}</td>
+            <td>Edit</td>
+        </tr>
+      `;
+    });
 
     $('#data-produk').DataTable({
       columnDefs: [{
