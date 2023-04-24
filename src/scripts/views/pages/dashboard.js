@@ -11,7 +11,7 @@ const Dashboard = {
             <aside-element></aside-element>
         </div>
         <div class="col-md-9 col-sm-11 col-11 p-5 border-start border-secondary" style="height: 100vh">
-            <h1>Dashboard</h1>
+            <h3>Dashboard</h3>
             <div class="row py-3">
               <div class="col-lg-4 mb-4">
                 <div class="card">
