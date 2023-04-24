@@ -2,7 +2,7 @@
     font-family: cursive;
 }
 body{
-    background: #f1fbff;
+    background: rgb(225, 225, 225);
 }
 
 /* Navbar */
@@ -62,10 +62,10 @@ body{
 
 /* Home */
 .section-padding {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 .carousel-item{
-    height: 70vh;
+    height: 60vh;
     min-height: 300px;
 }
 .corousel-caption{
@@ -77,6 +77,8 @@ body{
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 25px;
+    color: #ffc107;
+    text-shadow: 2px 2px 4px black;
 }
 .carousel-caption p{
     width: 60%;
@@ -84,7 +86,7 @@ body{
     font-size: 15px;
     line-height: 1.9;
 }
-.carousel-inner::before{
+/* .carousel-inner::before{
     content: ' ';
     position: absolute;
     width: 100%;
@@ -93,12 +95,22 @@ body{
     left: 0;
     background: rgba(24, 24, 24, 0.7);
     z-index: 1;
+} */
+
+.hovered-card{
+    transition: .3s;
+}
+.hovered-card:hover{
+    transform: scale(1.1);
 }
 
-.services .card-body i{
-    font-size: 50px;
+.icon-services{
+    width: 90px;
+    height: 90px;
+    border: solid #fff 2px;
+    border-radius: 50px;
+    color: white;
 }
-
 
 /* Product */
 body .section-product{
