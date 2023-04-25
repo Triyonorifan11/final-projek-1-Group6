@@ -26,6 +26,11 @@ const Detail = {
                     <h1>Celana Chinos</h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus fugit quibusdam praesentium. Asperiores, consequatur hic? Dicta sint quos ea vitae.</p>
                     <h2 class="text-warning">Rp 50.000</h2>
+                    <div class="wrapper mt-3">
+                        <span class="minus">-</span>
+                        <span class="num">01</span>
+                        <span class="plus">+</span>
+                    </div>
                     <button class="btn btn-outline-warning mt-3">Beli Sekarang</button>
                 </div>
             </div>
@@ -69,6 +74,27 @@ const Detail = {
     });
     addClassElement('#product', 'active');
     // Fungsi ini akan dipanggil setelah render()
+
+    const plus = document.querySelector(".plus"),
+    minus = document.querySelector(".minus"),
+    num = document.querySelector(".num");
+
+    let a = 1;
+
+    plus.addEventListener("click", ()=>{
+      a++;
+      a = (a < 10) ? "0" + a : a;
+      num.innerText = a;
+    });
+
+    minus.addEventListener("click", ()=>{
+      if (a > 1) {
+        a--;
+        a = (a < 10) ? "0" + a : a;
+        num.innerText = a;
+      }  
+    });
+
   },
 };
 
