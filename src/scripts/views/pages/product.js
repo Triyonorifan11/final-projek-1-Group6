@@ -14,363 +14,428 @@ const Product = {
 
             <section id="product" class="product section-product bg-secondary pb-4 pt-5">
                 <div class="row mb-4">
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">gfjhgk</h5>
-                                    <small>1 days ago</small>
+                    <div class="col-12">
+                        <h2 class="text-center mb-5">Semua Produk</h2>
+                        <div class="row">
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                   <small>Lorem ipsum dolor sit amet consectetur. Consequatur.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsa</h5>
-                                    <small>2 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsall</h5>
-                                    <small>1 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur. Consequatur.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsaer</h5>
-                                    <small>3 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">iugiuwdhyda</h5>
-                                    <small>3 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp....</p>
-                                  <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsa</h5>
-                                    <small>2 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsall</h5>
-                                    <small>1 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur. Consequatur.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsaer</h5>
-                                    <small>3 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsa</h5>
-                                    <small>2 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">iugiuwdhyda</h5>
-                                    <small>3 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp....</p>
-                                  <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsa</h5>
-                                    <small>2 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsall</h5>
-                                    <small>1 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur. Consequatur.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsaer</h5>
-                                    <small>3 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsa</h5>
-                                    <small>2 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">iugiuwdhyda</h5>
-                                    <small>3 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp....</p>
-                                  <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsa</h5>
-                                    <small>2 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsall</h5>
-                                    <small>1 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur. Consequatur.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsaer</h5>
-                                    <small>3 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsa</h5>
-                                    <small>2 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">iugiuwdhyda</h5>
-                                    <small>3 days ago</small>
+                            <div class="col-3 mb-3">
+                                <div class="card">
+                                    <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+                                        <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
+                                    </a>    
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center text-warning"><strong>Celana</strong></h5>
+                                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                                        <h4 class="text-center text-warning mb-3">Rp 50.000</h4>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Selengkapnya
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#detail.js">Detail</a></li>
+                                                <li><a class="dropdown-item" href="#">Beli</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <p class="mb-1">Rp....</p>
-                                  <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsa</h5>
-                                    <small>2 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsall</h5>
-                                    <small>1 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur. Consequatur.</small>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsaer</h5>
-                                    <small>3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 hovered-card mb-3">
-                        <div class="card">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#" class="list-group-item list-group-item-action active">
-                                    <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">hgkhkdsa</h5>
-                                    <small>2 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Rp100.000,-</p>
-                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
