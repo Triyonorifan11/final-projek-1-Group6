@@ -78,4 +78,30 @@ const formEditProduk = (data) => `
 </div>
 `;
 
-export { trDataProduk, formEditProduk };
+const cardProdukUser = (resultData) => `
+<div class="col-sm-6 col-lg-3 mb-3">
+    <div class="card">
+        <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+            <img src="${resultData.foto_produk}" class="card-img-top" alt="${resultData.nama_produk}" title="${resultData.nama_produk}" style="height: 250px; object-fit:cover; object-position:center;">
+        </a>    
+        <div class="card-body">
+            <h5 class="card-title text-center text-warning text-truncate"><strong>${resultData.nama_produk}</strong></h5>
+            <span class="d-inline-block text-truncate card-text text-center" style="max-width: 250px;">
+            ${resultData.nama_produk}
+            </span>
+            <h4 class="text-center text-warning mb-3">Rp ${formatRupiah(resultData.harga_produk)}</h4>
+            <div class="dropdown">
+                <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Selengkapnya
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#/detail/${resultData.id}">Detail</a></li>
+                    <li><a class="dropdown-item" href="#">Beli</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+`;
+
+export { trDataProduk, formEditProduk, cardProdukUser };

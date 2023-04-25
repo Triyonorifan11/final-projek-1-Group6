@@ -6,6 +6,7 @@ import Contact from '../views/pages/contact';
 import Product from '../views/pages/product';
 import Dashboard from '../views/pages/dashboard';
 import adminProduk from '../views/pages/admin-product';
+import adminCheckout from '../views/pages/admin-checkout';
 import formProduk from '../views/pages/form-produk';
 import editProduk from '../views/pages/edit-produk';
 import About from '../views/pages/about';
@@ -22,6 +23,7 @@ const routes = {
   '/form-produk': formProduk,
   '/edit-produk/:id': editProduk,
   '/about': About,
+  '/checkout': adminCheckout,
 };
 
 export default routes;
