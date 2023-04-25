@@ -39,7 +39,7 @@ const formProduk = {
                                             <label for="harga_produk" class="form-label">Harga produk <span class="text-danger">*</span></label>
                                             <div class="input-group mb-3">
                                                 <span class="input-group-text">Rp</span>
-                                                <input type="text" class="form-control" id="harga_produk" name="harga_produk" aria-label="harga produk" required>
+                                                <input type="number" class="form-control" id="harga_produk" name="harga_produk" aria-label="harga produk" required placeholder="15000">
                                             </div>
                                         </div>
                                         <div class="mb-3">
@@ -53,7 +53,7 @@ const formProduk = {
                                             </select>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="kategori_produk" class="form-label">Jenis produk <span class="text-danger">*</span></label>
+                                            <label for="kategori_produk" class="form-label">Kategori produk <span class="text-danger">*</span></label>
                                             <select class="form-select" id="kategori_produk" name="kategori_produk" aria-label="Default select example" required>
                                                 <option selected disabled>Pilih jenis</option>
                                                 <option value="Baju">Baju</option>
@@ -91,14 +91,17 @@ const formProduk = {
     if (userAccess) {
       if (userAccess.role !== 'admin') {
         redirect('#/');
+      } else {
+        const updateby = document.querySelector('#update_by');
+        const updateat = document.querySelector('#update_at');
+        updateby.innerHTML = userAccess.nama_user;
+        updateat.innerHTML = formatDate(new Date());
+        // Fungsi ini akan dipanggil setelah render()
+        await addProduk.init();
       }
+    } else {
+      redirect('#/');
     }
-    const updateby = document.querySelector('#update_by');
-    const updateat = document.querySelector('#update_at');
-    updateby.innerHTML = userAccess.nama_user;
-    updateat.innerHTML = formatDate(new Date());
-    // Fungsi ini akan dipanggil setelah render()
-    await addProduk.init();
   },
 };
 

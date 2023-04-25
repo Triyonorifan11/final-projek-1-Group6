@@ -7,6 +7,7 @@ import Product from '../views/pages/product';
 import Dashboard from '../views/pages/dashboard';
 import adminProduk from '../views/pages/admin-product';
 import formProduk from '../views/pages/form-produk';
+import editProduk from '../views/pages/edit-produk';
 import About from '../views/pages/about';
 
 const routes = {
@@ -19,6 +20,7 @@ const routes = {
   '/dashboard': Dashboard,
   '/my-product': adminProduk,
   '/form-produk': formProduk,
+  '/edit-produk/:id': editProduk,
   '/about': About,
 };
 
