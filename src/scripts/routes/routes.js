@@ -13,7 +13,7 @@ import About from '../views/pages/about';
 
 const routes = {
   '/': Home, // default page
-  '/detail': Detail,
+  '/detail/:id': Detail,
   '/login': Login,
   '/register': Register,
   '/contact': Contact,

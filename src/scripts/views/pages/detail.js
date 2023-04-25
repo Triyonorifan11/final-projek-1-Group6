@@ -1,4 +1,8 @@
-import { addClassElement } from '../../utils/functions';
+import UrlParser from '../../routes/url-parser';
+import editProduct from '../../utils/editProduk';
+import { addClassElement, flassMesagge, getUserInfo } from '../../utils/functions';
+import loader from '../../utils/loader';
+import { detailProdukUser } from '../../utils/template';
 
 const Detail = {
   async render() {
@@ -15,26 +19,7 @@ const Detail = {
         </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 col-lg-4 mb-3">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="img-fluid" alt="">
-                </div>
-                    
-                <div class="col-md-6 offset-md-1 col-lg-7 offset-lg-1">
-                    <h1>Celana Chinos</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus fugit quibusdam praesentium. Asperiores, consequatur hic? Dicta sint quos ea vitae.</p>
-                    <h2 class="text-warning">Rp 50.000</h2>
-                    <div class="wrapper mt-3">
-                        <span class="minus">-</span>
-                        <span class="num">01</span>
-                        <span class="plus">+</span>
-                    </div>
-                    <button class="btn btn-outline-warning mt-3">Beli Sekarang</button>
-                </div>
-            </div>
-        </div>
+    <div class="container-fluid" id="data_detail_produk">
     </div>
 
     <div class="container-fluid py-5 bg-secondary mt-5">
@@ -69,32 +54,58 @@ const Detail = {
   },
 
   async afterRender() {
+    const userAccess = getUserInfo();
     document.querySelectorAll('.nav-link').forEach((link) => {
       link.classList.remove('active');
     });
     addClassElement('#product', 'active');
-    // Fungsi ini akan dipanggil setelah render()
 
-    const plus = document.querySelector(".plus"),
-    minus = document.querySelector(".minus"),
-    num = document.querySelector(".num");
+    const templateDetailProduk = document.getElementById('data_detail_produk');
+    templateDetailProduk.innerHTML = loader();
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const dataProdukById = await editProduct.init(url.id);
+    dataProdukById.id = url.id;
+    templateDetailProduk.innerHTML = detailProdukUser(dataProdukById);
+
+    const addCheckout = document.getElementById('addCheckout');
+    const addtocart = document.getElementById('addtocart');
+    const plus = document.querySelector('.plus');
+    const minus = document.querySelector('.minus');
+    const num = document.querySelector('.num');
 
     let a = 1;
 
-    plus.addEventListener("click", ()=>{
-      a++;
-      a = (a < 10) ? "0" + a : a;
+    plus.addEventListener('click', () => {
+      a += 1;
       num.innerText = a;
     });
 
-    minus.addEventListener("click", ()=>{
+    minus.addEventListener('click', () => {
       if (a > 1) {
-        a--;
-        a = (a < 10) ? "0" + a : a;
+        a -= 1;
         num.innerText = a;
-      }  
+      }
     });
 
+    if (!userAccess) {
+      addtocart.addEventListener('click', (e) => {
+        e.preventDefault();
+        flassMesagge('warning', 'Harap login untuk tambah ke keranjang!', 'Perhatian');
+      });
+      addCheckout.addEventListener('click', (e) => {
+        e.preventDefault();
+        flassMesagge('warning', 'Harap login untuk beli!', 'Perhatian');
+      });
+    } else {
+      addtocart.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('tambah ke keranjang', dataProdukById);
+      });
+      addCheckout.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('checkout');
+      });
+    }
   },
 };
 
