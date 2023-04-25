@@ -15,7 +15,7 @@ const Home = {
             <div class="carousel-caption d-none d-md-block">
               <h5>Product Brand Terkenal</h5>
               <p>Anda bisa menemukan barang brand luar yang cocok untuk style anda</p>
-              <p><a href="#" class="btn btn-warning mt-3">Learn More</a></p>
+              <p><a href="#/about" class="btn btn-warning mt-3">Learn More</a></p>
             </div>
           </div>
           <div class="carousel-item active">
@@ -23,15 +23,15 @@ const Home = {
             <div class="carousel-caption d-none d-md-block">
               <h5>Second Tapi Keren</h5>
               <p>Ada banyak produk yang bisa anda temukan disini</p>
-              <p><a href="#" class="btn btn-warning mt-3">Learn More</a></p>
+              <p><a href="#/about" class="btn btn-warning mt-3">Learn More</a></p>
             </div>
           </div>
           <div class="carousel-item active">
             <img src="/img/home/1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>ColexxiIn Nih</h5>
+              <h5>CollexiIn Nih</h5>
               <p>Toko online thrifting terbaik di Indonesia</p>
-              <p><a href="#" class="btn btn-warning mt-3">Learn More</a></p>
+              <p><a href="#/about" class="btn btn-warning mt-3">Learn More</a></p>
             </div>
           </div>
         </div>
