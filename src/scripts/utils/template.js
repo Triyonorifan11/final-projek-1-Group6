@@ -86,22 +86,43 @@ const cardProdukUser = (resultData) => `
         </a>    
         <div class="card-body">
             <h5 class="card-title text-center text-warning text-truncate"><strong>${resultData.nama_produk}</strong></h5>
-            <span class="d-inline-block text-truncate card-text text-center" style="max-width: 250px;">
-            ${resultData.nama_produk}
+            <span class="d-inline-block text-truncate card-text text-center" style="max-width: 200px;">
+            ${resultData.deskripsi_produk}
             </span>
             <h4 class="text-center text-warning mb-3">Rp ${formatRupiah(resultData.harga_produk)}</h4>
-            <div class="dropdown">
-                <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Selengkapnya
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#/detail/${resultData.id}">Detail</a></li>
-                    <li><a class="dropdown-item" href="#">Beli</a></li>
-                </ul>
+            <a class="btn btn-warning" href="#/detail/${resultData.id}" title="Detail produk">Detail</a>
+            <button class="btn btn-outline-warning" id="addtocart" data-name="${resultData.nama_produk}" data-idProduk="${resultData.id}" title="Tambah ke keranjang"><i class="bi bi-cart"></i></button>
+            
+        </div>
+    </div>
+</div>
+`;
+
+const detailProdukUser = (resultData) => `
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-lg-4 mb-3">
+            <img src="${resultData.foto_produk}" class="img-fluid" alt="${resultData.nama_produk}" title="${resultData.nama_produk}">
+        </div>
+            
+        <div class="col-md-6 offset-md-1 col-lg-7 offset-lg-1">
+            <h1>${resultData.nama_produk}</h1>
+            <p>${resultData.deskripsi_produk}</p>
+            <h2 class="text-warning">Rp ${formatRupiah(resultData.harga_produk)}</h2>
+            <div class="wrapper mt-3">
+                <span class="minus">-</span>
+                <span class="num">1</span>
+                <span class="plus">+</span>
+            </div>
+            <div class="d-flex my-4">
+                <button class="btn btn-warning me-3" title="checkout" id="addCheckout">Beli Sekarang</button>
+                <button class="btn btn-outline-warning" id="addtocart" data-name="${resultData.nama_produk}" data-idProduk="${resultData.id}" title="Tambah ke keranjang"><i class="bi bi-cart"></i></button>
             </div>
         </div>
     </div>
 </div>
 `;
 
-export { trDataProduk, formEditProduk, cardProdukUser };
+export {
+  trDataProduk, formEditProduk, cardProdukUser, detailProdukUser,
+};
