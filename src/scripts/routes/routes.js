@@ -22,7 +22,6 @@ const routes = {
   '/form-produk': formProduk,
   '/edit-produk/:id': editProduk,
   '/about': About,
-  '/detail': Detail,
 };
 
 export default routes;

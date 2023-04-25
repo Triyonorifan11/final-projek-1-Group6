@@ -32,7 +32,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -53,7 +53,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -74,7 +74,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -95,7 +95,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -116,7 +116,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -137,7 +137,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -158,7 +158,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -179,7 +179,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -200,7 +200,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -221,7 +221,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -242,7 +242,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -263,7 +263,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -284,7 +284,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -305,7 +305,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -326,7 +326,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -347,7 +347,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -368,7 +368,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -389,7 +389,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -410,7 +410,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>
@@ -431,7 +431,7 @@ const Product = {
                                                     Selengkapnya
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#/detail.js">Detail</a></li>
+                                                    <li><a class="dropdown-item" href="#/detail">Detail</a></li>
                                                     <li><a class="dropdown-item" href="#">Beli</a></li>
                                                 </ul>
                                             </div>

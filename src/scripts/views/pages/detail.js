@@ -3,11 +3,11 @@ import { addClassElement } from '../../utils/functions';
 const Detail = {
   async render() {
     return `
-    <div class="container-fluid container-detail pt-5">
+    <div class="container-fluid container-detail">
       <div class="container pt-5">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/src/scripts/views/pages/product.js" style="text-decoration: none;">Product</a></li>
+                    <li class="breadcrumb-item"><a href="#/product" style="text-decoration: none;">Product</a></li>
                     <li class="breadcrumb-item">Detail</li>
                     <li class="breadcrumb-item active">Celana</li>
                 </ol>
@@ -64,6 +64,10 @@ const Detail = {
   },
 
   async afterRender() {
+    document.querySelectorAll('.nav-link').forEach((link) => {
+      link.classList.remove('active');
+    });
+    addClassElement('#product', 'active');
     // Fungsi ini akan dipanggil setelah render()
   },
 };
