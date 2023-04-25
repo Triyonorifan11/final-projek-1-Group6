@@ -3,8 +3,8 @@ import { addClassElement } from '../../utils/functions';
 const About = {
     async render() {
       return `
-        <div class="cms-full mbxl" style="margin-top: 40px;">         
-            <img src="https://static-id.zacdn.com/cms/staticpages/OWN-NOW-ABOUT-ME_03_png8.png" alt="">
+        <div class="img-about">         
+            <img src="/img/about.png" alt="">
         </div>
         <div class="jumbotron jumbotron-product text-center pt-5 pb-5">
             <h3 class="display-7">Tentang CollexiIn</h3>

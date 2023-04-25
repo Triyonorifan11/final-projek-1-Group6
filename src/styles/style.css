@@ -127,7 +127,12 @@ body .section-product{
 
 
 /* About Us */
-
+.img-about{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 68%;
+}
 
 
 /* Login register */
