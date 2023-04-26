@@ -316,7 +316,7 @@ body .container-product{
 
 /* Keranjang */
 .card-keranjang{
-    margin: 50px auto;
+    margin: 30px auto;
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 0;
@@ -344,24 +344,15 @@ body .container-product{
     height: 30px;
     padding: 5px;
 }
-.card-keranjang td a{
+.card-keranjang .remove{
     color: red;
     font-size: 12px;
     text-decoration: none;
 }
 .card-keranjang td img{
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
     margin-right: 10px;
-}
-.total-harga{
-    display: flex;
-    justify-content: flex-end;
-}
-.total-harga table{
-    border-top: 3px solid #ffc107;
-    width: 100%;
-    max-width: 400px;
 }
 .card-keranjang td:last-child{
     text-align: right;
@@ -369,7 +360,7 @@ body .container-product{
 .card-keranjang th:last-child{
     text-align: right;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 400px){
     .card-keranjang p{
         display: none;
     }

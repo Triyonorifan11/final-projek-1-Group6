@@ -11,6 +11,7 @@ const Keranjang = {
                     <th>Produk</th>
                     <th>Quantity</th>
                     <th>Subtotal</th>
+                    <th>Buy Now</th>
                 </tr>
                 <tr>
                     <td>
@@ -20,12 +21,13 @@ const Keranjang = {
                                 <p>Celana Jeans</p>
                                 <small>Harga : Rp 20.000</small>
                                 <br>
-                                <a href="#">Hapus</a>
+                                <a href="#" class="remove">Hapus</a>
                             </div>
                         </div>
                     </td>
                     <td><input type="number" value="1"></td>
                     <td>Rp 20.000</td>
+                    <td><p><a href="#" class="btn btn-warning mt-3">Beli</a></p></td>
                 </tr>
                 <tr>
                     <td>
@@ -35,12 +37,13 @@ const Keranjang = {
                                 <p>Celana Jeans</p>
                                 <small>Harga : Rp 20.000</small>
                                 <br>
-                                <a href="#">Hapus</a>
+                                <a href="#" class="remove">Hapus</a>
                             </div>
                         </div>
                     </td>
                     <td><input type="number" value="1"></td>
                     <td>Rp 20.000</td>
+                    <td><p><a href="#" class="btn btn-warning mt-3">Beli</a></p></td>
                 </tr>
                 <tr>
                     <td>
@@ -50,31 +53,15 @@ const Keranjang = {
                                 <p>Celana Jeans</p>
                                 <small>Harga : Rp 20.000</small>
                                 <br>
-                                <a href="#">Hapus</a>
+                                <a href="#" class="remove">Hapus</a>
                             </div>
                         </div>
                     </td>
                     <td><input type="number" value="1"></td>
                     <td>Rp 20.000</td>
+                    <td><p><a href="#" class="btn btn-warning mt-3">Beli</a></p></td>
                 </tr>
             </table>
-        
-            <div class="total-harga">
-                <table>
-                    <tr>
-                        <td>Subtotal</td>
-                        <td>Rp 60.000</td>
-                    </tr>
-                    <tr>
-                        <td>Ongkir</td>
-                        <td>Rp 10.000</td>
-                    </tr>
-                    <tr>
-                        <td>Total</td>
-                        <td>Rp 70.000</td>
-                    </tr>
-                </table>
-            </div>
         
         </div>
          `;
