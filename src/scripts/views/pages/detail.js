@@ -99,14 +99,15 @@ const Detail = {
       if (!userAccess) {
         e.preventDefault();
         flassMesagge('warning', 'Harap login untuk tambah ke keranjang!', 'Perhatian');
+      } else {
+        dataProdukById.quantity = a;
+        dataProdukById.subtotal = Math.floor(dataProdukById.harga_produk) * a;
+        putItemToCart(dataProdukById);
+        flassMesagge('success', 'Berhasil tambah keranjang', 'Berhasil!');
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
       }
-      dataProdukById.quantity = a;
-      dataProdukById.subtotal = Math.floor(dataProdukById.harga_produk) * a;
-      putItemToCart(dataProdukById);
-      flassMesagge('success', 'Berhasil tambah keranjang', 'Berhasil!');
-      setTimeout(() => {
-        window.location.reload();
-      }, 1500);
     });
 
     addCheckout.addEventListener('click', (e) => {

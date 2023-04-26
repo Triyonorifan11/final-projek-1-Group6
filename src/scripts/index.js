@@ -30,7 +30,11 @@ window.addEventListener('load', () => {
     } else {
       innerElement('#nama_akun', userAccess.nama_user);
       const itemCart = getItemCart();
-    innerElement('#keranjang', `<i class="bi bi-cart"></i> <span class="badge text-bg-secondary">${itemCart.length}</span>`);
+      if (itemCart !== false) {
+        innerElement('#keranjang', `<i class="bi bi-cart"></i> <span class="badge text-bg-secondary">${itemCart.length}</span>`);
+      } else {
+        innerElement('#keranjang', '<i class="bi bi-cart"></i> <span class="badge text-bg-secondary">0</span>');
+      }
     }
   }
   app.renderPage();
