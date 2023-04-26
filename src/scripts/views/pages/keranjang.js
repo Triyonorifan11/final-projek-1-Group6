@@ -1,80 +1,94 @@
-import { addClassElement } from '../../utils/functions';
+import Swal from 'sweetalert2';
+import {
+  addClassElement, getItemCart, getUserInfo, redirect, removeItemCart,
+} from '../../utils/functions';
+import { tblRowKeranjang } from '../../utils/template';
 
 const Keranjang = {
-    async render() {
-      return `
+  async render() {
+    return `
       <h1 class="text-center pt-5">Keranjang Anda</h1>
         <div class="small-container card-keranjang">
-
-            <table>
-                <tr>
-                    <th>Produk</th>
-                    <th>Quantity</th>
-                    <th>Subtotal</th>
-                    <th>Buy Now</th>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="card-info">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" alt="">
-                            <div>
-                                <p>Celana Jeans</p>
-                                <small>Harga : Rp 20.000</small>
-                                <br>
-                                <a href="#" class="remove">Hapus</a>
-                            </div>
-                        </div>
-                    </td>
-                    <td><input type="number" value="1"></td>
-                    <td>Rp 20.000</td>
-                    <td><p><a href="#" class="btn btn-warning mt-3">Beli</a></p></td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="card-info">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" alt="">
-                            <div>
-                                <p>Celana Jeans</p>
-                                <small>Harga : Rp 20.000</small>
-                                <br>
-                                <a href="#" class="remove">Hapus</a>
-                            </div>
-                        </div>
-                    </td>
-                    <td><input type="number" value="1"></td>
-                    <td>Rp 20.000</td>
-                    <td><p><a href="#" class="btn btn-warning mt-3">Beli</a></p></td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="card-info">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" alt="">
-                            <div>
-                                <p>Celana Jeans</p>
-                                <small>Harga : Rp 20.000</small>
-                                <br>
-                                <a href="#" class="remove">Hapus</a>
-                            </div>
-                        </div>
-                    </td>
-                    <td><input type="number" value="1"></td>
-                    <td>Rp 20.000</td>
-                    <td><p><a href="#" class="btn btn-warning mt-3">Beli</a></p></td>
-                </tr>
-            </table>
-        
+            <div class="table-responsive">
+                <table class="table" id="tblKeranjang">
+                    <thead>
+                        <tr>
+                            <th scope="col">Produk</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Subtotal</th>
+                            <th scope="col">Buy Now</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
         </div>
          `;
-    },
-  
-    async afterRender() {
-        document.querySelectorAll('.nav-link').forEach((link) => {
-            link.classList.remove('active');
+  },
+
+  async afterRender() {
+    document.querySelectorAll('.nav-link').forEach((link) => {
+      link.classList.remove('active');
+    });
+
+    const userAccess = getUserInfo();
+    if (userAccess) {
+      if (userAccess.role !== 'customer') {
+        redirect('#/');
+      } else {
+        const tbody = document.querySelector('tbody');
+        addClassElement('#keranjang', 'active');
+        const itemCart = getItemCart();
+        if (itemCart !== false) {
+          itemCart.forEach((item) => {
+            tbody.innerHTML += tblRowKeranjang(item);
           });
-          addClassElement('#keranjang', 'active');
-          // Fungsi ini akan dipanggil setelah render()
-    },
-  };
-  
-  export default Keranjang;
-  
+          const btnRemoveItem = document.querySelectorAll('.btnRemove');
+          btnRemoveItem.forEach((btnRemove) => {
+            btnRemove.addEventListener('click', (e) => {
+              const namaProduk = btnRemove.getAttribute('data-namaProduk');
+              const idProduk = btnRemove.getAttribute('data-idProduk');
+              e.preventDefault();
+              Swal.fire({
+                icon: 'question',
+                title: `Hapus Item ${namaProduk}?`,
+                showCancelButton: true,
+                confirmButtonText: 'Hapus',
+              }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                  removeItemCart(idProduk);
+                  Swal.fire('Berhasil!', '', 'success').then((res) => ((res.isConfirmed) ? window.location.reload() : ''));
+                } else if (result.isDenied) {
+                  Swal.fire('Changes are not saved', '', 'info');
+                }
+              });
+            });
+          });
+        } else {
+          tbody.innerHTML = `
+        <tr>
+          <td class="text-start">Tidak ada item</td>
+        </tr>
+      `;
+        }
+      }
+    } else {
+      Swal.fire({
+        icon: 'warning',
+        text: 'Harap Login',
+        title: 'Perhatian',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          redirect('#/');
+        }
+      });
+    }
+
+    // Fungsi ini akan dipanggil setelah render()
+  },
+};
+
+export default Keranjang;
