@@ -3,57 +3,27 @@ import { addClassElement } from '../../utils/functions';
 const Contact = {
     async render() {
       return `
-        <section id="contact" class="contact mb-5">
-            <div class="container">
-                <div class="row pt-4 mb-4">
-                    <div class="col text-center">
-                        <h2>Contact Us</h2>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center pb-4">
-                    <div class="col-lg-4">
-                        <div class="card text-white text-bg-dark mb-3 text-center">
-                            <div class="card-body">
-                                <h5 class="card-title">Contact Us</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, repellat!</p>
-                            </div>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><h1>Lokasi</h1></li>
-                            <li class="list-group-item">Kantor</li>
-                            <li class="list-group-item">Ds. Slungkep, Kayen, Pati</li>
-                            <li class="list-group-item">Jawa Tengah, Indonesia</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <form>
-                            <div class="form-group">
-                                <label for="nama">Nama</label>
-                                <input type="text" class="form-control" id="nama">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="telp">No Telp</label>
-                                <input type="text" class="form-control" id="telp">
-                            </div>
-                            <div class="form-group">
-                                <label for="pesan">Pesan</label>
-                                <textarea name="pesan" id="pesan" class="form-control"></textarea>
-                            </div>
-                            <div class="form-group pt-3">
-                                <button type="button" class="btn btn-dark">Kirim Pesan!</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
+        <h1 class="text-center pt-5">Contact Us</h1>
+        <div class="contact-wrap">
+            <div class="contact-in bg-light">
+                <h1>Contact Info</h1>
+                <h2><i class="bi bi-telephone-fill"></i>Phone</h2>
+                <p>+62-8822-7234-856</p>
+                <h2><i class="bi bi-envelope-fill"></i>Email</h2>
+                <p>collexiin@gmail.com</p>
+                <h2><i class="bi bi-geo-alt-fill"></i>Address</h2>
+                <p>Surabaya, Jawa Tengah, Indonesia</p>
+                <ul>
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="#"><i class="bi bi-google"></i></a></li>
+                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                </ul>
             </div>
-        </section>
+            <div class="contact-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126646.2096185681!2d112.63011003502965!3d-7.275611975199526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbf8381ac47f%3A0x3027a76e352be40!2sSurabaya%2C%20Kota%20SBY%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1682492669336!5m2!1sid!2sid" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
          `;
     },
   
