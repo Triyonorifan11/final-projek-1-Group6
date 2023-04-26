@@ -221,11 +221,10 @@ body .container-product{
     padding: 40px 30px;
 }
 .contact-in:nth-child(1){
-    flex: 30%;
-    color: black;
+    flex: 40%;
 }
 .contact-in:nth-child(2){
-    flex: 25%;
+    flex: 60%;
     padding: 0;
 }
 
