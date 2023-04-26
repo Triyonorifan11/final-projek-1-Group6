@@ -10,6 +10,7 @@ import adminCheckout from '../views/pages/admin-checkout';
 import formProduk from '../views/pages/form-produk';
 import editProduk from '../views/pages/edit-produk';
 import About from '../views/pages/about';
+import Keranjang from '../views/pages/keranjang';
 
 const routes = {
   '/': Home, // default page
@@ -24,6 +25,7 @@ const routes = {
   '/edit-produk/:id': editProduk,
   '/about': About,
   '/checkout': adminCheckout,
+  '/keranjang': Keranjang,
 };
 
 export default routes;

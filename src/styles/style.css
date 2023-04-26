@@ -160,7 +160,7 @@ body .container-product{
     width: 420px;
 }
 .about-text{
-    width: 550px;
+    width: 700px;
 }
 .main-about{
     width: 1130px;
@@ -313,6 +313,70 @@ body .container-product{
     height: 100vh;
     object-fit: cover;
 }
+
+/* Keranjang */
+.card-keranjang{
+    margin: 50px auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 0;
+}
+.card-keranjang table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.card-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-keranjang th{
+    text-align: left;
+    padding: 5px;
+    color: #000;
+    background: #ffc107;
+    font-weight: normal;
+}
+.card-keranjang td{
+    padding: 10px 5px;  
+}
+.card-keranjang td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+.card-keranjang td a{
+    color: red;
+    font-size: 12px;
+    text-decoration: none;
+}
+.card-keranjang td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-harga{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-harga table{
+    border-top: 3px solid #ffc107;
+    width: 100%;
+    max-width: 400px;
+}
+.card-keranjang td:last-child{
+    text-align: right;
+}
+.card-keranjang th:last-child{
+    text-align: right;
+}
+@media only screen and (max-width: 600px){
+    .card-keranjang p{
+        display: none;
+    }
+}
+
+
+
 
 /* pagination table */
 #data-produk_paginate ul.pagination li.paginate_button.page-item.active{
