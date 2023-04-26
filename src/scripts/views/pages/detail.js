@@ -1,6 +1,8 @@
 import UrlParser from '../../routes/url-parser';
 import editProduct from '../../utils/editProduk';
-import { addClassElement, flassMesagge, getUserInfo } from '../../utils/functions';
+import {
+  addClassElement, flassMesagge, getUserInfo, innerElement, isExtistItemInCart, putItemToCart,
+} from '../../utils/functions';
 import loader from '../../utils/loader';
 import { detailProdukUser } from '../../utils/template';
 
@@ -13,7 +15,7 @@ const Detail = {
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#/product" style="text-decoration: none;">Product</a></li>
                     <li class="breadcrumb-item">Detail</li>
-                    <li class="breadcrumb-item active">Celana</li>
+                    <li class="breadcrumb-item active" id="kategori">Celana</li>
                 </ol>
             </nav>
         </div>
@@ -66,6 +68,7 @@ const Detail = {
     const dataProdukById = await editProduct.init(url.id);
     dataProdukById.id = url.id;
     templateDetailProduk.innerHTML = detailProdukUser(dataProdukById);
+    innerElement('#kategori', dataProdukById.kategori_produk);
 
     const addCheckout = document.getElementById('addCheckout');
     const addtocart = document.getElementById('addtocart');
@@ -87,25 +90,31 @@ const Detail = {
       }
     });
 
-    if (!userAccess) {
-      addtocart.addEventListener('click', (e) => {
+    if (userAccess.role === 'admin' || isExtistItemInCart(dataProdukById.id)) {
+      addClassElement('#addCheckout', 'disabled');
+      addClassElement('#addtocart', 'disabled');
+    }
+
+    addtocart.addEventListener('click', (e) => {
+      if (!userAccess) {
         e.preventDefault();
         flassMesagge('warning', 'Harap login untuk tambah ke keranjang!', 'Perhatian');
-      });
-      addCheckout.addEventListener('click', (e) => {
+      }
+      dataProdukById.quantity = a;
+      dataProdukById.subtotal = Math.floor(dataProdukById.harga_produk) * a;
+      putItemToCart(dataProdukById);
+      flassMesagge('success', 'Berhasil tambah keranjang', 'Berhasil!');
+      setTimeout(() => {
+        window.location.reload();
+      }, 1500);
+    });
+
+    addCheckout.addEventListener('click', (e) => {
+      if (!userAccess) {
         e.preventDefault();
         flassMesagge('warning', 'Harap login untuk beli!', 'Perhatian');
-      });
-    } else {
-      addtocart.addEventListener('click', (e) => {
-        e.preventDefault();
-        console.log('tambah ke keranjang', dataProdukById);
-      });
-      addCheckout.addEventListener('click', (e) => {
-        e.preventDefault();
-        console.log('checkout');
-      });
-    }
+      }
+    });
   },
 };
 

@@ -50,7 +50,6 @@ const adminCheckout = {
 
   async afterRender() {
     const userAccess = getUserInfo();
-    console.log(userAccess);
     if (userAccess) {
       if (userAccess.role !== 'admin') {
         redirect('#/');

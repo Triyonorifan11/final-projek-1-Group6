@@ -3,7 +3,7 @@ import '../styles/style.css';
 import './utils/asideElement';
 import App from './views/app';
 import {
-  addClassElement, getUserInfo, innerElement, removeClassElement,
+  addClassElement, getItemCart, getUserInfo, innerElement, removeClassElement,
 } from './utils/functions';
 
 const app = new App({
@@ -23,10 +23,14 @@ window.addEventListener('load', () => {
   if (userAccess) {
     removeClassElement('#akun', 'd-none');
     addClassElement('#link-login', 'd-none');
-    innerElement('#nama_akun', userAccess.nama_user);
     if (userAccess.role === 'admin') {
+      innerElement('#nama_akun', `Admin|${userAccess.nama_user}`);
       addClassElement('#link-keranjang', 'd-none');
       removeClassElement('#link-dashoard', 'd-none');
+    } else {
+      innerElement('#nama_akun', userAccess.nama_user);
+      const itemCart = getItemCart();
+    innerElement('#keranjang', `<i class="bi bi-cart"></i> <span class="badge text-bg-secondary">${itemCart.length}</span>`);
     }
   }
   app.renderPage();

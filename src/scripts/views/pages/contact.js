@@ -1,8 +1,8 @@
 import { addClassElement } from '../../utils/functions';
 
 const Contact = {
-    async render() {
-      return `
+  async render() {
+    return `
         <h1 class="text-center pt-5">Contact Us</h1>
         <div class="contact-wrap">
             <div class="contact-in bg-light">
@@ -25,16 +25,15 @@ const Contact = {
             </div>
         </div>
          `;
-    },
-  
-    async afterRender() {
-        document.querySelectorAll('.nav-link').forEach((link) => {
-            link.classList.remove('active');
-          });
-          addClassElement('#contact', 'active');
-          // Fungsi ini akan dipanggil setelah render()
-    },
-  };
-  
-  export default Contact;
-  
+  },
+
+  async afterRender() {
+    document.querySelectorAll('.nav-link').forEach((link) => {
+      link.classList.remove('active');
+    });
+    addClassElement('#contact', 'active');
+    // Fungsi ini akan dipanggil setelah render()
+  },
+};
+
+export default Contact;

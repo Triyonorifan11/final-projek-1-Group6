@@ -91,8 +91,7 @@ const cardProdukUser = (resultData) => `
             </span>
             <h4 class="text-center text-warning mb-3">Rp ${formatRupiah(resultData.harga_produk)}</h4>
             <a class="btn btn-warning" href="#/detail/${resultData.id}" title="Detail produk">Detail</a>
-            <button class="btn btn-outline-warning" id="addtocart" data-name="${resultData.nama_produk}" data-idProduk="${resultData.id}" title="Tambah ke keranjang"><i class="bi bi-cart"></i></button>
-            
+            <span class="ms-auto">Stok : ${resultData.stok}</span>
         </div>
     </div>
 </div>
@@ -109,10 +108,13 @@ const detailProdukUser = (resultData) => `
             <h1>${resultData.nama_produk}</h1>
             <p>${resultData.deskripsi_produk}</p>
             <h2 class="text-warning">Rp ${formatRupiah(resultData.harga_produk)}</h2>
-            <div class="wrapper mt-3">
-                <span class="minus">-</span>
-                <span class="num">1</span>
-                <span class="plus">+</span>
+            <div class="d-flex">
+                <div class="wrapper mt-3">
+                    <span class="minus">-</span>
+                    <span class="num">1</span>
+                    <span class="plus">+</span>
+                </div>
+                <span class="badge bg-secondary fs-6 mt-3 ms-3">Tersedia : ${resultData.stok}</span>
             </div>
             <div class="d-flex my-4">
                 <button class="btn btn-warning me-3" title="checkout" id="addCheckout">Beli Sekarang</button>
@@ -123,6 +125,25 @@ const detailProdukUser = (resultData) => `
 </div>
 `;
 
+const tblRowKeranjang = (data) => `
+<tr>
+    <td>
+        <div class="card-info">
+            <img src="${data.foto_produk}" style="height: 150px; object-fit:cover; object-position:center;" alt="">
+            <div>
+                <p>${data.nama_produk}</p>
+                <small>Harga : Rp ${formatRupiah(data.harga_produk)}</small>
+                <br>
+                <button class="btn-sm btn btn-danger btnRemove" data-idProduk="${data.id}" data-namaProduk="${data.nama_produk}"><i class="bi bi-trash"></i></button>
+            </div>
+        </div>
+    </td>
+    <td><input type="number" class="form-control" value="${data.quantity}" readonly></td>
+    <td>Rp ${formatRupiah(data.subtotal.toString())}</td>
+    <td><button data-idProduk="${data.id}" class="btn btn-warning mt-3">Checkout</button></td>
+</tr>
+`;
+
 export {
-  trDataProduk, formEditProduk, cardProdukUser, detailProdukUser,
+  trDataProduk, formEditProduk, cardProdukUser, detailProdukUser, tblRowKeranjang,
 };

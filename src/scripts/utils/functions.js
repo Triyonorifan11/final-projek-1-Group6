@@ -90,6 +90,52 @@ function innerElement(idOrClass, element) {
   document.querySelector(idOrClass).innerHTML = element;
 }
 
+function checkForStorage() {
+  return typeof (Storage) !== 'undefined';
+}
+
+const DATA_CART_USER = 'data_cart_user';
+function isExtistItemInCart(id) {
+  if (localStorage.getItem(DATA_CART_USER) === null) {
+    return false;
+  }
+  const dataCart = JSON.parse(localStorage.getItem(DATA_CART_USER));
+  const result = dataCart.find((dataId) => dataId.id === id);
+  if (result !== undefined) return true;
+  return false;
+}
+
+function getItemCart() {
+  if (localStorage.getItem(DATA_CART_USER) === null) {
+    return false;
+  }
+  return JSON.parse(localStorage.getItem(DATA_CART_USER));
+}
+
+function removeItemCart(id) {
+  if (isExtistItemInCart(id)) {
+    const allItem = getItemCart();
+    const newData = allItem.filter((item) => item.id !== id);
+    localStorage.setItem(DATA_CART_USER, JSON.stringify(newData));
+  } else {
+    console.log('Tidak ada item');
+  }
+}
+
+function putItemToCart(data) {
+  if (checkForStorage()) {
+    let historyData = null;
+    if (localStorage.getItem(DATA_CART_USER) === null) {
+      historyData = [];
+    } else {
+      historyData = JSON.parse(localStorage.getItem(DATA_CART_USER));
+    }
+
+    historyData.unshift(data);
+    localStorage.setItem(DATA_CART_USER, JSON.stringify(historyData));
+  }
+}
+
 export {
   isLogin,
   getUserInfo,
@@ -102,4 +148,8 @@ export {
   addClassElement,
   removeClassElement,
   innerElement,
+  putItemToCart,
+  isExtistItemInCart,
+  getItemCart,
+  removeItemCart,
 };
