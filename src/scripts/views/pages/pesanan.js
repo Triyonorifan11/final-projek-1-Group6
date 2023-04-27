@@ -80,6 +80,8 @@ const Pesanan = {
           });
         });
       }
+    } else {
+      redirect('#/');
     }
 
     // Fungsi ini akan dipanggil setelah render()
