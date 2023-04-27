@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import {
   addClassElement, getUserInfo, redirect,
 } from '../../utils/functions';
@@ -10,23 +11,28 @@ const Pesanan = {
   async render() {
     return `
       <h1 class="text-center pt-5">Daftar Pesanan Anda</h1>
-        <div class="small-container card-keranjang">
-            <div class="table-responsive">
-              <table class="table">
-                <thead class="table-warning">
-                  <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Produk</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Total</th>
-                    <th scope="col">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                </tbody>
-              </table>
-              <div id="loading"></div>
+        <div class="container">
+          <div class="card border-0 shadow-sm mt-4">
+            <div class="card-body">
+              <div class="table-responsive bg-light">
+                <table class="table table-striped table-hover">
+                  <thead class="bg-warning">
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Produk</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+                <div id="loading"></div>
+              </div>
             </div>
+          </div>
             
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -71,7 +77,7 @@ const Pesanan = {
             result.bedge = 'text-bg-secondary';
           } else if (result.status === 'dikirim') {
             result.bedge = 'text-bg-warning';
-          } else if (result.status === 'diterima') {
+          } else if (result.status === 'terkirim') {
             result.bedge = 'text-bg-success';
           }
           tbody.innerHTML += tblrowCPesanan(result, i);
@@ -87,6 +93,30 @@ const Pesanan = {
             e.preventDefault();
             const dataProdukById = await editProduct.init(idProduk);
             modalBody.innerHTML = modalBodyPesanan(dataProdukById);
+          });
+        });
+
+        const btnTerima = document.querySelectorAll('.btn-terima');
+        btnTerima.forEach((btnterima) => {
+          btnterima.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const idCheckout = btnterima.getAttribute('data-idCheckout');
+            const idProduk = btnterima.getAttribute('data-idProduk');
+            Swal.fire({
+              icon: 'question',
+              title: `Item ${idProduk} sudah diterima?`,
+              showCancelButton: true,
+              confirmButtonText: 'Ya, diterima',
+            }).then((result) => {
+              /* Read more about isConfirmed, isDenied below */
+              if (result.isConfirmed) {
+                const payloadUpdate = {
+                  id_checkout: idCheckout,
+                  status: 'terkirim',
+                };
+                checkoutProduk.updateStatusCheckout(payloadUpdate);
+              }
+            });
           });
         });
       }

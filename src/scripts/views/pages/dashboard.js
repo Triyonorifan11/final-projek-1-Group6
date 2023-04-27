@@ -71,6 +71,9 @@ const Dashboard = {
       if (userAccess.role !== 'admin') {
         redirect('#/');
       } else {
+        document.querySelectorAll('.nav-link').forEach((link) => {
+          link.classList.remove('active');
+        });
         document.querySelectorAll('.aside-link').forEach((link) => {
           link.classList.remove('btn-warning');
         });
