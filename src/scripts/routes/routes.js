@@ -12,6 +12,7 @@ import editProduk from '../views/pages/edit-produk';
 import About from '../views/pages/about';
 import Keranjang from '../views/pages/keranjang';
 import CheckoutPage from '../views/pages/checkout';
+import Pesanan from '../views/pages/pesanan';
 
 const routes = {
   '/': Home, // default page
@@ -28,6 +29,7 @@ const routes = {
   '/checkout': adminCheckout,
   '/keranjang': Keranjang,
   '/checkout-produk': CheckoutPage,
+  '/pesanan': Pesanan,
 };
 
 export default routes;
