@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import UrlParser from '../../routes/url-parser';
 import editProduct from '../../utils/editProduk';
 import {
@@ -92,6 +93,20 @@ const Detail = {
     });
 
     if (userAccess.role === 'admin' || isExtistItemInCart(dataProdukById.id)) {
+      addClassElement('#addCheckout', 'disabled');
+      addClassElement('#addtocart', 'disabled');
+    }
+
+    if (dataProdukById.stok < 2) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Perhatian!',
+        text: 'Produk tidak dapat dibeli, stok menipis',
+      }).then((res) => {
+        if (res.isConfirmed) {
+          redirect('#/product');
+        }
+      });
       addClassElement('#addCheckout', 'disabled');
       addClassElement('#addtocart', 'disabled');
     }
