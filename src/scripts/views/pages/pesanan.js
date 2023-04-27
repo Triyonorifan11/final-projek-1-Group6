@@ -18,6 +18,7 @@ const Pesanan = {
                     <th scope="col">No</th>
                     <th scope="col">Produk</th>
                     <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
                     <th scope="col">Status</th>
                   </tr>
                 </thead>
@@ -64,6 +65,15 @@ const Pesanan = {
           i += 1;
           const result = doc.data();
           result.id = doc.id;
+          if (result.status === 'diminta') {
+            result.bedge = 'text-bg-primary';
+          } else if (result.status === 'dikemas') {
+            result.bedge = 'text-bg-secondary';
+          } else if (result.status === 'dikirim') {
+            result.bedge = 'text-bg-warning';
+          } else if (result.status === 'diterima') {
+            result.bedge = 'text-bg-success';
+          }
           tbody.innerHTML += tblrowCPesanan(result, i);
         });
         loading.innerHTML = '';

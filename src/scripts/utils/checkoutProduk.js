@@ -1,6 +1,6 @@
 import { customAlphabet } from 'nanoid';
 import {
-  collection, doc, getDocs, getFirestore, query, setDoc, where,
+  collection, doc, getDocs, getFirestore, query, setDoc, updateDoc, where,
 } from 'firebase/firestore';
 import Swal from 'sweetalert2';
 import {
@@ -22,6 +22,11 @@ const checkoutProduk = {
     const docSnap = await getDocs(q);
     return docSnap;
   },
+  async getAllDataCheckOutItem() {
+    const q = query(collection(db, 'checkouts'));
+    const docSnap = await getDocs(q);
+    return docSnap;
+  },
 
   async _setDataCheckout(data) {
     const dataCheckoutUser = {
@@ -31,6 +36,7 @@ const checkoutProduk = {
       status: data.status,
       subtotal: data.subtotal.toString(),
       nama_user: data.nama_user,
+      newStok: data.newStok,
     };
 
     await this._createDataCheckout(dataCheckoutUser);
@@ -41,13 +47,15 @@ const checkoutProduk = {
     innerElement('#btnpay', 'Mohon Tunggu ..');
     try {
       const nanoid = customAlphabet('1234567890abcdefghjiklmnopqrstuvwxyz', 19);
-      const idProduk = `checkout_${nanoid()}`;
+      const idCheckout = `checkout_${nanoid()}`;
       const date = new Date();
       const userAccess = getUserInfo();
       const dataNew = data;
       dataNew.create_at = date.toISOString();
       dataNew.create_by = userAccess.nama_user;
-      await setDoc(doc(db, 'checkouts', idProduk), dataNew);
+      await setDoc(doc(db, 'checkouts', idCheckout), dataNew);
+      const docRef = doc(db, 'products', dataNew.id_produk);
+      await updateDoc(docRef, { stok: dataNew.newStok.toString() });
       removeItemCart(dataNew.id_produk);
       localStorage.removeItem('checkout_item');
       Swal.fire('Pemesanan Berhasil', '', 'success').then((res) => ((res.isConfirmed) ? redirect('#/pesanan') : redirect('#/pesanan')));
