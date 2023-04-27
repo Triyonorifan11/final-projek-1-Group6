@@ -11,6 +11,7 @@ import formProduk from '../views/pages/form-produk';
 import editProduk from '../views/pages/edit-produk';
 import About from '../views/pages/about';
 import Keranjang from '../views/pages/keranjang';
+import CheckoutPage from '../views/pages/checkout';
 
 const routes = {
   '/': Home, // default page
@@ -26,6 +27,7 @@ const routes = {
   '/about': About,
   '/checkout': adminCheckout,
   '/keranjang': Keranjang,
+  '/checkout-produk': CheckoutPage,
 };
 
 export default routes;

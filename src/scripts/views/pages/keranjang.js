@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
 import {
-  addClassElement, getItemCart, getUserInfo, redirect, removeItemCart,
+  addClassElement, getItemCart, getItemCartById, getUserInfo, redirect, removeItemCart,
 } from '../../utils/functions';
 import { tblRowKeranjang } from '../../utils/template';
 
@@ -45,7 +45,10 @@ const Keranjang = {
           itemCart.forEach((item) => {
             tbody.innerHTML += tblRowKeranjang(item);
           });
+          // btn remove from cart
           const btnRemoveItem = document.querySelectorAll('.btnRemove');
+          const btnCheckout = document.querySelectorAll('.checkout-product');
+
           btnRemoveItem.forEach((btnRemove) => {
             btnRemove.addEventListener('click', (e) => {
               const namaProduk = btnRemove.getAttribute('data-namaProduk');
@@ -61,8 +64,31 @@ const Keranjang = {
                 if (result.isConfirmed) {
                   removeItemCart(idProduk);
                   Swal.fire('Berhasil!', '', 'success').then((res) => ((res.isConfirmed) ? window.location.reload() : ''));
-                } else if (result.isDenied) {
-                  Swal.fire('Changes are not saved', '', 'info');
+                }
+              });
+            });
+          });
+
+          btnCheckout.forEach((btnCO) => {
+            btnCO.addEventListener('click', (e) => {
+              e.preventDefault();
+              const namaProduk = btnCO.getAttribute('data-namaProduk');
+              const idProduk = btnCO.getAttribute('data-idProduk');
+              e.preventDefault();
+              Swal.fire({
+                icon: 'question',
+                title: `Checkout Item ${namaProduk}?`,
+                showCancelButton: true,
+                confirmButtonText: 'Checkout',
+              }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                  const thisItemCO = getItemCartById(idProduk)[0];
+                  thisItemCO.id_customer = getUserInfo().id;
+                  thisItemCO.nama_user = getUserInfo().nama_user;
+                  thisItemCO.status = 'diminta';
+                  localStorage.setItem('checkout_item', JSON.stringify(thisItemCO));
+                  Swal.fire('Lanjutkan pembayaran', '', 'success').then((res) => ((res.isConfirmed) ? redirect('#/checkout-produk') : ''));
                 }
               });
             });

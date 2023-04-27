@@ -140,10 +140,53 @@ const tblRowKeranjang = (data) => `
     </td>
     <td><input type="number" class="form-control" value="${data.quantity}" readonly></td>
     <td>Rp ${formatRupiah(data.subtotal.toString())}</td>
-    <td><button data-idProduk="${data.id}" class="btn btn-warning mt-3">Checkout</button></td>
+    <td><button data-idProduk="${data.id}" class="btn btn-warning mt-3 checkout-product" data-namaProduk="${data.nama_produk}">Checkout</button></td>
 </tr>
 `;
 
+const cardCheckoutPembayaran = (resultData) => `
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+        <h3>Checkout Pembayaran</h3>
+        <div class="row py-4">
+            <div class="col-md-6">
+                <img src="${resultData.foto_produk}" class="img-fluid rounded" style="height: 350px; width:100%; object-fit:cover; object-position: center;" alt="${resultData.nama_produk}" title="${resultData.nama_produk}">
+            </div>    
+            <div class="col-md-6">
+                <div class="d-flex justify-content-between">
+                    <span class="fw-bold">Nama Produk</span>
+                    <p>${resultData.nama_produk}</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span class="fw-bold">Harga Produk</span>
+                    <p>Rp ${formatRupiah(resultData.harga_produk)}</p>
+                </div>
+                <div class="mb-1">
+                    <span class="fw-bold">Deskripsi Produk</span>
+                    <p>${resultData.deskripsi_produk}</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span class="fw-bold">Jumlah Beli</span>
+                    <p>${resultData.quantity}</p>
+                </div>
+                <div class="d-flex justify-content-between bg-light p-2 mb-2 rounded">
+                    <span class="fw-bold">Total Beli</span>
+                    <span class="text-warning">Rp ${formatRupiah(resultData.subtotal.toString())}</span>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-warning" type="button" id="btnpay">Bayar Sekarang</button>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
+`;
+
 export {
-  trDataProduk, formEditProduk, cardProdukUser, detailProdukUser, tblRowKeranjang,
+  trDataProduk,
+  formEditProduk,
+  cardProdukUser,
+  detailProdukUser,
+  tblRowKeranjang,
+  cardCheckoutPembayaran,
 };
