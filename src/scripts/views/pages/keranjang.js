@@ -87,6 +87,7 @@ const Keranjang = {
                   thisItemCO.id_customer = getUserInfo().id;
                   thisItemCO.nama_user = getUserInfo().nama_user;
                   thisItemCO.status = 'diminta';
+                  thisItemCO.newStok = Math.floor(thisItemCO.stok) - thisItemCO.quantity;
                   localStorage.setItem('checkout_item', JSON.stringify(thisItemCO));
                   Swal.fire('Lanjutkan pembayaran', '', 'success').then((res) => ((res.isConfirmed) ? redirect('#/checkout-produk') : ''));
                 }

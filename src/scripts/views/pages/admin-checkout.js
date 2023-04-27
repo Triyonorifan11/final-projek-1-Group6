@@ -1,8 +1,9 @@
 /* eslint-disable no-undef */
+import checkoutProduk from '../../utils/checkoutProduk';
+import editProduct from '../../utils/editProduk';
 import { addClassElement, getUserInfo, redirect } from '../../utils/functions';
 import loader from '../../utils/loader';
-import readDataProduk from '../../utils/readProduk';
-import { trDataProduk } from '../../utils/template';
+import { modalBodyPesanan, tblrowDaftarCO } from '../../utils/template';
 
 const adminCheckout = {
   async render() {
@@ -23,15 +24,13 @@ const adminCheckout = {
                             <div class="table-responsive px-2 py-4">
                                 <table class="table table-hover table-striped table-sm" id="data-produk">
                                     <thead class="table-dark">
-                                        <tr>
-                                            <th scope="col">No</th>
-                                            <th scope="col" class="no-sort">Gambar</th>
-                                            <th scope="col">Nama Produk</th>
-                                            <th scope="col">Diperbarui Pada</th>
-                                            <th scope="col">Harga</th>
-                                            <th scope="col">Stok</th>
-                                            <th scope="col" class="no-sort">Action</th>
-                                        </tr>
+                                      <tr>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Produk</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col" class="no-sort">Action</th>
+                                      </tr>
                                     </thead>
                                     <tbody id="dataAll">
                                     </tbody>
@@ -44,6 +43,19 @@ const adminCheckout = {
             </div
         </div>
       </div>
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Produk</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      </div>
+    </div>
+  </div>
+</div>
     </section>
     `;
   },
@@ -58,18 +70,39 @@ const adminCheckout = {
           link.classList.remove('btn-warning');
         });
         addClassElement('#admincheckout', 'btn-warning');
+        const tbody = document.querySelector('tbody');
         const loading = document.getElementById('loading');
         loading.innerHTML = loader();
-        const dataAllProduk = await readDataProduk.init();
-        const tbdataProduk = document.getElementById('dataAll');
+        const mychekout = await checkoutProduk.getAllDataCheckOutItem();
         let i = 0;
-        dataAllProduk.forEach((doc) => {
-          const resultData = doc.data();
-          resultData.id = doc.id;
+        mychekout.forEach((doc) => {
           i += 1;
-          tbdataProduk.innerHTML += trDataProduk(resultData, i);
+          const result = doc.data();
+          result.id = doc.id;
+          if (result.status === 'diminta') {
+            result.bedge = 'text-bg-primary';
+          } else if (result.status === 'dikemas') {
+            result.bedge = 'text-bg-secondary';
+          } else if (result.status === 'dikirim') {
+            result.bedge = 'text-bg-warning';
+          } else if (result.status === 'diterima') {
+            result.bedge = 'text-bg-success';
+          }
+          tbody.innerHTML += tblrowDaftarCO(result, i);
         });
         loading.innerHTML = '';
+
+        const datamodal = document.querySelectorAll('.data-modal');
+        const modalBody = document.querySelector('.modal-body');
+        datamodal.forEach((dtl) => {
+          dtl.addEventListener('click', async (e) => {
+            modalBody.innerHTML = loader();
+            const idProduk = dtl.getAttribute('data-id');
+            e.preventDefault();
+            const dataProdukById = await editProduct.init(idProduk);
+            modalBody.innerHTML = modalBodyPesanan(dataProdukById);
+          });
+        });
 
         $('#data-produk').DataTable({
           lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, 'All']],

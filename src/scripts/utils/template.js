@@ -187,7 +187,20 @@ const tblrowCPesanan = (data, i) => `
     <td scope="col">${i}</td>
     <td scope="col"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${data.id_produk}" class="data-modal text-link link-underline link-underline-opacity-0">${data.id_produk}</a></td>
     <td scope="col">${data.quantity}</td>
-    <td scope="col"><span class="badge text-bg-primary">${data.status}</span></th>
+    <td scope="col">Rp ${formatRupiah(data.subtotal)}</td>
+    <td scope="col"><span class="badge  ${data.bedge} text-capitalize">${data.status}</span></td>
+</tr>
+`;
+const tblrowDaftarCO = (data, i) => `
+<tr>
+    <td scope="col">${i}</td>
+    <td scope="col"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${data.id_produk}" class="data-modal text-link link-underline link-underline-opacity-0">${data.id_produk}</a></td>
+    <td scope="col">${data.quantity}</td>
+    <td scope="col"><span class="badge ${data.bedge} text-capitalize">${data.status}</span></th>
+    <td scope="col">
+        <button class="btn btn-secondary btn-sm btn-kemas" title="Kemas produk"><i class="bi bi-box-seam-fill"></i></button>
+        <button class="btn btn-warning btn-sm btn-kirim" title="Kirim produk"><i class="bi bi-send-check"></i></button>
+    </td>
 </tr>
 `;
 
@@ -214,5 +227,6 @@ export {
   tblRowKeranjang,
   cardCheckoutPembayaran,
   tblrowCPesanan,
+  tblrowDaftarCO,
   modalBodyPesanan,
 };
