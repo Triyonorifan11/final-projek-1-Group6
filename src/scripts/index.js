@@ -28,6 +28,7 @@ window.addEventListener('load', () => {
       addClassElement('#link-keranjang', 'd-none');
       removeClassElement('#link-dashoard', 'd-none');
     } else {
+      removeClassElement('#daftar-pesanan', 'd-none');
       innerElement('#nama_akun', userAccess.nama_user);
       const itemCart = getItemCart();
       if (itemCart !== false) {

@@ -1,7 +1,8 @@
 import UrlParser from '../../routes/url-parser';
 import editProduct from '../../utils/editProduk';
 import {
-  addClassElement, flassMesagge, getUserInfo, innerElement, isExtistItemInCart, putItemToCart,
+  addClassElement,
+  flassMesagge, getUserInfo, innerElement, isExtistItemInCart, putItemToCart, redirect,
 } from '../../utils/functions';
 import loader from '../../utils/loader';
 import { detailProdukUser } from '../../utils/template';
@@ -114,6 +115,14 @@ const Detail = {
       if (!userAccess) {
         e.preventDefault();
         flassMesagge('warning', 'Harap login untuk beli!', 'Perhatian');
+      } else {
+        dataProdukById.quantity = a;
+        dataProdukById.subtotal = Math.floor(dataProdukById.harga_produk) * a;
+        putItemToCart(dataProdukById);
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
+        redirect('#/keranjang');
       }
     });
   },
