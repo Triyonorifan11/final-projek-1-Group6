@@ -1,5 +1,6 @@
+import dashboardAdmin from '../../utils/dashboard';
 import {
-  addClassElement, getUserInfo, redirect,
+  addClassElement, getUserInfo, innerElement, redirect,
 } from '../../utils/functions';
 
 const Dashboard = {
@@ -22,7 +23,7 @@ const Dashboard = {
                       </div>
                       <div class="col-8">
                         <h4 class="fw-bold">Total Produk</h4>
-                        <h5 class="fw-bold text-warning">10 Produk</h5>
+                        <h5 class="fw-bold text-warning" id="totalProduk">0</h5>
                       </div>
                     </div>
                   </div>
@@ -36,8 +37,8 @@ const Dashboard = {
                         <i class="bi bi-bar-chart-line-fill fs-1 ms-3"></i>
                       </div>
                       <div class="col-8">
-                        <h4 class="fw-bold">Total Produk</h4>
-                        <h5 class="fw-bold text-warning">10 Produk</h5>
+                        <h4 class="fw-bold">Checkout</h4>
+                        <h5 class="fw-bold text-warning" id="totalCheckout">0</h5>
                       </div>
                     </div>
                   </div>
@@ -51,8 +52,8 @@ const Dashboard = {
                         <i class="bi bi-bar-chart-line-fill fs-1 ms-3"></i>
                       </div>
                       <div class="col-8">
-                        <h4 class="fw-bold">Total Produk</h4>
-                        <h5 class="fw-bold text-warning">10 Produk</h5>
+                        <h4 class="fw-bold">Total User</h4>
+                        <h5 class="fw-bold text-warning" id="totalUser">0</h5>
                       </div>
                     </div>
                   </div>
@@ -78,6 +79,10 @@ const Dashboard = {
           link.classList.remove('btn-warning');
         });
         addClassElement('#dashboard', 'btn-warning');
+        const allCount = await dashboardAdmin.init();
+        innerElement('#totalProduk', `${allCount.countProduct} Produk`);
+        innerElement('#totalCheckout', `${allCount.countCheckout} Checkout`);
+        innerElement('#totalUser', `${allCount.countUser} User`);
       }
     } else {
       redirect('#/');
