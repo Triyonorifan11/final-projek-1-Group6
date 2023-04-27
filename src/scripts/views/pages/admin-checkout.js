@@ -27,6 +27,7 @@ const adminCheckout = {
                                       <tr>
                                         <th scope="col">No</th>
                                         <th scope="col">Produk</th>
+                                        <th scope="col">Customer</th>
                                         <th scope="col">Quantity</th>
                                         <th scope="col">Status</th>
                                         <th scope="col" class="no-sort">Action</th>
@@ -66,6 +67,9 @@ const adminCheckout = {
       if (userAccess.role !== 'admin') {
         redirect('#/');
       } else {
+        document.querySelectorAll('.nav-link').forEach((link) => {
+          link.classList.remove('active');
+        });
         document.querySelectorAll('.aside-link').forEach((link) => {
           link.classList.remove('btn-warning');
         });
@@ -85,7 +89,7 @@ const adminCheckout = {
             result.bedge = 'text-bg-secondary';
           } else if (result.status === 'dikirim') {
             result.bedge = 'text-bg-warning';
-          } else if (result.status === 'diterima') {
+          } else if (result.status === 'terkirim') {
             result.bedge = 'text-bg-success';
           }
           tbody.innerHTML += tblrowDaftarCO(result, i);
@@ -101,6 +105,54 @@ const adminCheckout = {
             e.preventDefault();
             const dataProdukById = await editProduct.init(idProduk);
             modalBody.innerHTML = modalBodyPesanan(dataProdukById);
+          });
+        });
+
+        const btnKemas = document.querySelectorAll('.btn-kemas');
+        btnKemas.forEach((btnkemas) => {
+          btnkemas.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const idCheckout = btnkemas.getAttribute('data-idCheckout');
+            const idProduk = btnkemas.getAttribute('data-idProduk');
+            Swal.fire({
+              icon: 'question',
+              title: `Kemas Item ${idProduk}?`,
+              showCancelButton: true,
+              confirmButtonText: 'Kemas',
+            }).then((result) => {
+              /* Read more about isConfirmed, isDenied below */
+              if (result.isConfirmed) {
+                const payloadUpdate = {
+                  id_checkout: idCheckout,
+                  status: 'dikemas',
+                };
+                checkoutProduk.updateStatusCheckout(payloadUpdate);
+              }
+            });
+          });
+        });
+
+        const btnKirim = document.querySelectorAll('.btn-kirim');
+        btnKirim.forEach((btnkirim) => {
+          btnkirim.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const idCheckout = btnkirim.getAttribute('data-idCheckout');
+            const idProduk = btnkirim.getAttribute('data-idProduk');
+            Swal.fire({
+              icon: 'question',
+              title: `Kirim Item ${idProduk}?`,
+              showCancelButton: true,
+              confirmButtonText: 'Kirim',
+            }).then((result) => {
+              /* Read more about isConfirmed, isDenied below */
+              if (result.isConfirmed) {
+                const payloadUpdate = {
+                  id_checkout: idCheckout,
+                  status: 'dikirim',
+                };
+                checkoutProduk.updateStatusCheckout(payloadUpdate);
+              }
+            });
           });
         });
 

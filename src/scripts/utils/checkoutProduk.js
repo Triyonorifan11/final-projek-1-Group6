@@ -66,6 +66,17 @@ const checkoutProduk = {
       innerElement('#btnpay', 'Bayar Sekarang');
     }
   },
+
+  async updateStatusCheckout(data) {
+    try {
+      const docRef = doc(db, 'checkouts', data.id_checkout);
+      await updateDoc(docRef, { status: data.status });
+      Swal.fire('Berhasil', '', 'success')
+        .then((res) => ((res.isConfirmed) ? window.location.reload() : ''));
+    } catch (error) {
+      flassMesagge('error', `Error= ${error}`, 'Gagal!');
+    }
+  },
 };
 
 export default checkoutProduk;

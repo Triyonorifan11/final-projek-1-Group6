@@ -185,21 +185,23 @@ const cardCheckoutPembayaran = (resultData) => `
 const tblrowCPesanan = (data, i) => `
 <tr>
     <td scope="col">${i}</td>
-    <td scope="col"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${data.id_produk}" class="data-modal text-link link-underline link-underline-opacity-0">${data.id_produk}</a></td>
-    <td scope="col">${data.quantity}</td>
-    <td scope="col">Rp ${formatRupiah(data.subtotal)}</td>
-    <td scope="col"><span class="badge  ${data.bedge} text-capitalize">${data.status}</span></td>
+    <td><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${data.id_produk}" class="data-modal text-link link-underline link-underline-opacity-0">${data.id_produk}</a></td>
+    <td>${data.quantity}</td>
+    <td>Rp ${formatRupiah(data.subtotal)}</td>
+    <td><span class="badge  ${data.bedge} text-capitalize">${data.status}</span></td>
+    <td><button class="btn btn-success btn-sm btn-terima ${(data.status === 'dikirim') ? '' : 'disabled'}" title="Pesanan diterima" data-idCheckout="${data.id}" data-idProduk="${data.id_produk}"><i class="bi bi-box-seam-fill"></i> Pesanan diterima</button></td>
 </tr>
 `;
 const tblrowDaftarCO = (data, i) => `
 <tr>
     <td scope="col">${i}</td>
     <td scope="col"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${data.id_produk}" class="data-modal text-link link-underline link-underline-opacity-0">${data.id_produk}</a></td>
+    <td scope="col">${data.nama_user}</td>
     <td scope="col">${data.quantity}</td>
     <td scope="col"><span class="badge ${data.bedge} text-capitalize">${data.status}</span></th>
     <td scope="col">
-        <button class="btn btn-secondary btn-sm btn-kemas" title="Kemas produk"><i class="bi bi-box-seam-fill"></i></button>
-        <button class="btn btn-warning btn-sm btn-kirim" title="Kirim produk"><i class="bi bi-send-check"></i></button>
+        <button class="btn btn-secondary btn-sm btn-kemas ${(data.status !== 'diminta') ? 'disabled' : ''}" title="Kemas produk" data-idCheckout="${data.id}" data-idProduk="${data.id_produk}"><i class="bi bi-box-seam-fill"></i></button>
+        <button class="btn btn-warning btn-sm btn-kirim ${(data.status !== 'dikemas') ? 'disabled' : ''}" title="Kirim produk"  data-idCheckout="${data.id}"  data-idProduk="${data.id_produk}"><i class="bi bi-send-check"></i></button>
     </td>
 </tr>
 `;

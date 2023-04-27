@@ -51,11 +51,13 @@ const adminProduk = {
 
   async afterRender() {
     const userAccess = getUserInfo();
-    console.log(userAccess);
     if (userAccess) {
       if (userAccess.role !== 'admin') {
         redirect('#/');
       } else {
+        document.querySelectorAll('.nav-link').forEach((link) => {
+          link.classList.remove('active');
+        });
         document.querySelectorAll('.aside-link').forEach((link) => {
           link.classList.remove('btn-warning');
         });

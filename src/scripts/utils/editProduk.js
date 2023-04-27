@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import {
   deleteDoc,
   doc, getDoc, getFirestore, updateDoc,
@@ -5,7 +6,7 @@ import {
 import { deleteObject, getStorage, ref } from 'firebase/storage';
 import Swal from 'sweetalert2';
 import {
-    escapeHtml,
+  escapeHtml,
   flassMesagge, getUserInfo, redirect, uploadFile,
 } from './functions';
 import app from '../global/config';
