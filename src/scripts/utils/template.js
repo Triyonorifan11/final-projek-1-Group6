@@ -182,6 +182,30 @@ const cardCheckoutPembayaran = (resultData) => `
 </div>
 `;
 
+const tblrowCPesanan = (data, i) => `
+<tr>
+    <td scope="col">${i}</td>
+    <td scope="col"><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="${data.id_produk}" class="data-modal text-link link-underline link-underline-opacity-0">${data.id_produk}</a></td>
+    <td scope="col">${data.quantity}</td>
+    <td scope="col"><span class="badge text-bg-primary">${data.status}</span></th>
+</tr>
+`;
+
+const modalBodyPesanan = (resultData) => `
+<div class="row">
+        <div class="col-md-5 col-lg-4 mb-3">
+            <img src="${resultData.foto_produk}" class="img-fluid" alt="${resultData.nama_produk}" title="${resultData.nama_produk}">
+        </div>
+            
+        <div class="col-md-6 offset-md-1 col-lg-7 offset-lg-1">
+            <h1>${resultData.nama_produk}</h1>
+            <p>${resultData.deskripsi_produk}</p>
+            <h2 class="text-warning">Rp ${formatRupiah(resultData.harga_produk)}</h2>
+            <span class="badge bg-secondary fs-6 mt-3 ms-3">Tersedia : ${resultData.stok}</span>
+        </div>
+    </div>
+`;
+
 export {
   trDataProduk,
   formEditProduk,
@@ -189,4 +213,6 @@ export {
   detailProdukUser,
   tblRowKeranjang,
   cardCheckoutPembayaran,
+  tblrowCPesanan,
+  modalBodyPesanan,
 };

@@ -1,6 +1,7 @@
+import Swal from 'sweetalert2';
 import checkoutProduk from '../../utils/checkoutProduk';
 import {
-  addClassElement, getItemCheckout, getUserInfo, redirect,
+  getItemCheckout, getUserInfo, redirect,
 } from '../../utils/functions';
 import { cardCheckoutPembayaran } from '../../utils/template';
 
@@ -26,7 +27,17 @@ const CheckoutPage = {
           const btnpay = document.getElementById('btnpay');
           btnpay.addEventListener('click', async (e) => {
             e.preventDefault();
-            await checkoutProduk.init(dataCheckoutItem);
+            Swal.fire({
+              icon: 'question',
+              title: 'Bayar sekarang ?',
+              showCancelButton: true,
+              confirmButtonText: 'Bayar',
+            }).then((result) => {
+              /* Read more about isConfirmed, isDenied below */
+              if (result.isConfirmed) {
+                checkoutProduk.init(dataCheckoutItem);
+              }
+            });
           });
         } else {
           redirect('#/keranjang');
