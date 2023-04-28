@@ -128,7 +128,7 @@ const Home = {
                             </div>
                             <h3 class="card-title">Kaos</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in nulla possimus debitis quis ab amet omnis aspernatur aliquid hic?</p>
-                            <button class="btn bg-warning text-dark">Kunjungi</button>
+                            <a href="#/product" class="btn bg-warning text-dark">Kunjungi</a>
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,7 @@ const Home = {
                             </div>
                             <h3 class="card-title">Celana</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in nulla possimus debitis quis ab amet omnis aspernatur aliquid hic?</p>
-                            <button class="btn bg-warning text-dark">Kunjungi</button>
+                            <a href="#/product" class="btn bg-warning text-dark">Kunjungi</a>
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,7 @@ const Home = {
                             </div>
                             <h3 class="card-title">Jaket</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in nulla possimus debitis quis ab amet omnis aspernatur aliquid hic?</p>
-                            <button class="btn bg-warning text-dark">Kunjungi</button>
+                            <a href="#/product" class="btn bg-warning text-dark">Kunjungi</a>
                         </div>
                     </div>
                 </div>
@@ -167,7 +167,7 @@ const Home = {
                             </div>
                             <h3 class="card-title">Sepatu</h3>
                             <p>Lorem ipsum dolor Losem isut amet dumb sit amet consectetur adipisicing elit. Eum in nulla possimus debitis quis ab amet omnis aspernatur aliquid hic?</p>
-                            <button class="btn bg-warning text-dark">Kunjungi</button>
+                            <a href="#/product" class="btn bg-warning text-dark">Kunjungi</a>
                         </div>
                     </div>
                 </div>

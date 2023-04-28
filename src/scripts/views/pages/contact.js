@@ -14,10 +14,10 @@ const Contact = {
                 <h2><i class="bi bi-geo-alt-fill"></i>Address</h2>
                 <p>Surabaya, Jawa Tengah, Indonesia</p>
                 <ul>
-                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-                    <li><a href="#"><i class="bi bi-google"></i></a></li>
-                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="https://www.twitter.com/"><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="https://www.google.com/"><i class="bi bi-google"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a></li>
                 </ul>
             </div>
             <div class="contact-in">
