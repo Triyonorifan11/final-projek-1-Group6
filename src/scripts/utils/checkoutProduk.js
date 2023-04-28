@@ -53,9 +53,10 @@ const checkoutProduk = {
       const dataNew = data;
       dataNew.create_at = date.toISOString();
       dataNew.create_by = userAccess.nama_user;
-      await setDoc(doc(db, 'checkouts', idCheckout), dataNew);
       const docRef = doc(db, 'products', dataNew.id_produk);
       await updateDoc(docRef, { stok: dataNew.newStok.toString() });
+      delete dataNew.newStok;
+      await setDoc(doc(db, 'checkouts', idCheckout), dataNew);
       removeItemCart(dataNew.id_produk);
       localStorage.removeItem('checkout_item');
       Swal.fire('Pemesanan Berhasil', '', 'success').then((res) => ((res.isConfirmed) ? redirect('#/pesanan') : redirect('#/pesanan')));
