@@ -38,7 +38,7 @@ const About = {
               <div class=" main-about">
                   <div class="mt-md-5 about-text text-center">
                       <p>Temukan ribuan brand lokal dan internasional original dan berkualitas untuk melengkapi kebutuhan fashion Anda. Jika nanti pesanan tidak memuaskan Anda, nikmati gratis 30 hari pengembalian dengan mudah di seluruh Indonesia.</p>
-                      <button type="button">Let's Talk</button>
+                      <a href="#/contact" class="btn">Let's Talk</a>
                   </div>
               </div>
           </div>

@@ -42,7 +42,6 @@ body{
     text-align: left;
     font: bold 16px sans-serif;
     padding: 50px 50px 50px 50px;
-    margin-top: 80px;
 }
 
 .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
@@ -355,7 +354,7 @@ body .container-product{
     font-size: 18px;
     margin-bottom: 45px;
 }
-.about-text button{
+.about .btn{
     background-color: #ffc107;
     color: white;
     text-decoration: none;
@@ -365,7 +364,7 @@ body .container-product{
     border-radius: 30px;
     transition: .4s;
 }
-.about-text button:hover{
+.about .btn:hover{
     background: transparent;
     border: 2px solid #ffc107;
     cursor: pointer;

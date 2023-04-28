@@ -32,22 +32,22 @@ const Detail = {
 
             <div class="row justify-content-center">
                 <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-3">
-                    <a href="">
+                    <a href="#/product">
                         <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="img-fluid img-thumbnail" alt="">
                     </a>    
                 </div>
                 <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-3">
-                    <a href="">
+                    <a href="#/product">
                         <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="img-fluid img-thumbnail" alt="">
                     </a>    
                 </div>
                 <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-3">
-                    <a href="">
+                    <a href="#/product">
                         <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="img-fluid img-thumbnail" alt="">
                     </a> 
                 </div>
                 <div class="col-6 col-sm-6 col-md-3 col-lg-2 mb-3">
-                    <a href="">
+                    <a href="#/product">
                         <img src="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" class="img-fluid img-thumbnail" alt="">
                     </a>    
                 </div>
