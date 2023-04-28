@@ -1,7 +1,8 @@
 /* eslint-disable no-undef */
 import {
+  collection,
   deleteDoc,
-  doc, getDoc, getFirestore, updateDoc,
+  doc, getDoc, getDocs, getFirestore, query, updateDoc, where,
 } from 'firebase/firestore';
 import { deleteObject, getStorage, ref } from 'firebase/storage';
 import Swal from 'sweetalert2';
@@ -95,11 +96,10 @@ const editProduct = {
         confirmButtonText: 'Ya',
         confirmButtonColor: '#ffc107',
       }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
           this._deleteFileproduct(data.foto_produk);
+          this._getDataCheckoutByIdProduk(data.id);
           this._deleteDataProduk(data.id);
-        //   flassMesagge('success', 'Berhasil ganti gambar!', 'Berhasil!');
         } else {
           gambarProduk.value = '';
         }
@@ -131,6 +131,7 @@ const editProduct = {
       btnSave.innerHTML = 'Update data';
     }
   },
+
   async _deleteDataProduk(id) {
     try {
       await deleteDoc(doc(db, 'products', id));
@@ -150,6 +151,27 @@ const editProduct = {
       return docSnap.data();
     }
     return null;
+  },
+
+  async _getDataCheckoutByIdProduk(id) {
+    const getId = id;
+    const q = query(collection(db, 'checkouts'), where('id_produk', '==', getId));
+    let checkoutData;
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((dCO) => {
+      checkoutData = dCO.data();
+      checkoutData.id_checkout = dCO.id;
+      // doc.data() is never undefined for query doc snapshots
+    });
+    await this._deleteDataCheckOutById(checkoutData.id_checkout);
+  },
+
+  async _deleteDataCheckOutById(id) {
+    try {
+      await deleteDoc(doc(db, 'checkouts', id));
+    } catch (error) {
+      flassMesagge('error', `Error= ${error}`, 'Gagal!');
+    }
   },
 
 };
