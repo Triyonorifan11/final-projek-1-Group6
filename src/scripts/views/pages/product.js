@@ -8,9 +8,9 @@ const Product = {
     return `
             <div class="jumbotron jumbotron-product text-center pt-5 pb-5">
                 <h3 class="display-6">Selamat Datang di Product Kami</h3>
-                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <p class="lead">Temukan produk thrifting berkualitas, Ada banyak produk brand terkenal yang dapat anda temukan disini. </p>
                 <hr class="my-3">
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                <p>Gratis ongkir hingga Rp 15.000 tanpa minimal pembelian</p>
                 <a class="btn btn-dark btn-lg" href="#/keranjang" role="button">Mulai Belanja</a>
             </div>
 
