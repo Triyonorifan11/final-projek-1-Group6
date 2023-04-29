@@ -57,7 +57,8 @@ const Home = {
                 <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
                     <div class="deskripsi-text">
                         <h2>We Product Best Quality</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad labore veniam reprehenderit error maxime eveniet rem porro in, doloremque repellat repudiandae sequi autem, deleniti et distinctio necessitatibus eius deserunt odio. Impedit molestias ea sunt, optio ratione laboriosam ipsam, quia corporis quisquam possimus inventore quidem quod. Magni facere neque totam ad.</p>
+                        <p>Lebih dari 3.000 produk online dan ratusan produk baru setiap minggunya, kami sangat ambisius dan akan terus berkembang.
+                        Kami adalah sarana penyedia fashion yang diimbangi dengan teknologi terkini yang akan memberikan Anda pengalaman berbelanja online yang tak tertandingin. Mengapa berbelanja di tempat lain ketika CollexiIn adalah toko thrifting online yang melayani segala keperluan fashion Anda. </p>
                     </div>
                 </div>
             </div>
@@ -78,7 +79,7 @@ const Home = {
                     </div>
                     <div class="mt-3 text-white text-center">
                         <h5>Cast on Delivery</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis ab quia quam deserunt exercitationem vitae.</p>
+                        <p>Kami melayani sistem penbayaran COD atau cast on delevery di seluruh wilayah Indonesia.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 hovered-card mb-3">
@@ -89,7 +90,7 @@ const Home = {
                     </div>
                     <div class="mt-3 text-white text-center">
                         <h5>Payment Gateway</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis ab quia quam deserunt exercitationem vitae.</p>
+                        <p>Kami melayani sistem pembayaran Payment atau pembayaran dengan cara tranfer yang memudahkan anda.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 hovered-card mb-3">
@@ -100,7 +101,7 @@ const Home = {
                     </div>
                     <div class="mt-3 text-white text-center">
                         <h5>Pay Later</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis ab quia quam deserunt exercitationem vitae.</p>
+                        <p>Kami juga melayani sistem pembayaran Pay Later untuk anda yang ingin berbelanja namun belum memiliki uang.</p>
                     </div>
                 </div>
             </div>
@@ -114,7 +115,7 @@ const Home = {
                 <div class="col-md-12">
                     <div class="section-header pb-5">
                         <h2>Produk Kami</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eius fuga, voluptate perspiciatis corporis accusamus!</p>
+                        <p>Temukan ribuan brand lokal dan internasional original dan berkualitas untuk melengkapi kebutuhan fashion Anda.</p>
                     </div>
                 </div>
             </div>

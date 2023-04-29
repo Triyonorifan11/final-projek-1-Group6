@@ -14,18 +14,18 @@ const About = {
                   </div>
                   <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5 about-text">
                       <h5>Collexi<span class="text-warning">In</span></h5>
-                      <p>CollexiIn Indonesia didirikan pada tahun 2012. Saat ini, CollexiIn Indonesia merupakan retail online fashion dengan perkembangan paling pesat di Asia. 
+                      <p>CollexiIn Indonesia didirikan pada tahun 2012. Saat ini, CollexiIn Indonesia merupakan toko online Trhifting dengan perkembangan paling pesat di Asia. 
                           Situs di setiap negara memastikan bahwa produk fashion disesuaikan dengan selera negara masing-masing dan mengadaptasi preferensinya. 
-                          Dengan pilihan lebih dari 500 brand lokal dan internasional, kami membawa fashion ke dalam dimensi yang lebih baik dari sebelumnya. 
-                          Kami menawarkan pakaian wanita, pakaian pria, sepatu, aksesoris, perlengkapan olahraga, busana muslim, dan banyak lagi! Hal inilah yang membuat kami menjadi tujuan utama fashion online di Indonesia. 
+                          Dengan pilihan brand lokal dan internasional, kami membawa fashion ke dalam dimensi yang lebih baik dari sebelumnya. 
+                          Kami menawarkan pakaian wanita, pakaian pria, sepatu, aksesoris, perlengkapan olahraga, busana muslim, dan banyak lagi! Hal inilah yang membuat kami menjadi tujuan utama thrifting online di Indonesia. 
                       </p>
                   </div>
               </div>
               <div class="row main-about">
                   <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5 about-text">
                       <p>Hanya dalam beberapa tahun, kami telah merevolusi skena mode di Asia, dimulai dari kebiasaan berbelanja Anda hingga membentuk gaya personal Anda. 
-                          Lebih dari 30.000 produk online dan ratusan produk baru setiap minggunya, kami sangat ambisius dan akan terus berkembang. Kabar baiknya adalah, kami memberikan Anda banyak sekali pilihan untuk tetap menjadi seseorang yang stylish. 
-                          Kami adalah sarana penyedia fashion yang diimbangi dengan teknologi terkini yang akan memberikan Anda pengalaman berbelanja online yang tak tertandingin. Mengapa berbelanja di tempat lain ketika CollexiIn adalah toko fashion online yang melayani segala keperluan fashion Anda. 
+                          Lebih dari 3.000 produk online dan ratusan produk baru setiap minggunya, kami sangat ambisius dan akan terus berkembang. Kabar baiknya adalah, kami memberikan Anda banyak sekali pilihan untuk tetap menjadi seseorang yang stylish. 
+                          Kami adalah sarana penyedia fashion yang diimbangi dengan teknologi terkini yang akan memberikan Anda pengalaman berbelanja online yang tak tertandingin. Mengapa berbelanja di tempat lain ketika CollexiIn adalah toko thrifting online yang melayani segala keperluan fashion Anda. 
                           Hubungi kami melalui Facebook, ikuti Twitter atau Instagram untuk informasi terbaru seputar fashion dan tren terkini.
                       </p>
                   </div>
