@@ -81,7 +81,7 @@ const formEditProduk = (data) => `
 const cardProdukUser = (resultData) => `
 <div class="col-sm-6 col-lg-3 mb-3">
     <div class="card">
-        <a href="https://firebasestorage.googleapis.com/v0/b/collexi-fp-1-hactiv8.appspot.com/o/products%2Fproduct_fvysiiiuaypq89qrcm6.jpg?alt=media&token=918aee0a-57c2-4533-b2c2-e488dfb2e42e" data-lighbox="celana-chinos" data-title="celana chinos">
+        <a href="#" data-img="${resultData.foto_produk}" data-lighbox="${resultData.nama_produk}" data-title="${resultData.nama_produk}" target="_blank" class="img-show" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <img src="${resultData.foto_produk}" class="card-img-top" alt="${resultData.nama_produk}" title="${resultData.nama_produk}" style="height: 250px; object-fit:cover; object-position:center;">
         </a>    
         <div class="card-body">

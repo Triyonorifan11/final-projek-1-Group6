@@ -26,7 +26,21 @@ const Product = {
                         </div>
                     </div>
                 </div>    
-            </div>    
+            </div>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg ">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Foto Produk</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  </div>
+                </div>
+              </div>
+            </div>            
          `;
   },
 
@@ -39,14 +53,26 @@ const Product = {
     const loading = document.getElementById('loading');
     loading.innerHTML = loader();
     const dataAllProduk = await readDataProduk.init();
-    let i = 0;
     dataAllProduk.forEach((doc) => {
       const resultData = doc.data();
       resultData.id = doc.id;
-      i += 1;
       daftarProduk.innerHTML += cardProdukUser(resultData);
     });
     loading.innerHTML = '';
+
+    const imgshow = document.querySelectorAll('.img-show');
+    imgshow.forEach((img) => {
+      img.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modalbody = document.querySelector('.modal-body');
+        const imgSrc = img.getAttribute('data-img');
+        modalbody.innerHTML = `
+        <div class="d-flex justify-content-center">
+          <img src="${imgSrc}" style="height: 450px; width="300px" object-fit:cover; object-position:center;">
+        </div>
+        `;
+      });
+    });
   },
 };
 
