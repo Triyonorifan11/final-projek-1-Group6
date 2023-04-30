@@ -12,7 +12,7 @@ const Contact = {
                 <h2><i class="bi bi-envelope-fill"></i>Email</h2>
                 <p>collexiin@gmail.com</p>
                 <h2><i class="bi bi-geo-alt-fill"></i>Address</h2>
-                <p>Surabaya, Jawa Tengah, Indonesia</p>
+                <p>Surabaya, Jawa Timur, Indonesia</p>
                 <ul>
                     <li><a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a></li>
                     <li><a href="https://www.twitter.com/"><i class="bi bi-twitter"></i></a></li>

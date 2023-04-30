@@ -1,5 +1,5 @@
 *{
-    font-family: cursive;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 body{
     background: rgb(225, 225, 225);
@@ -57,7 +57,7 @@ body{
 
 .footer-distributed h3 {
     color: #ffffff;
-    font: normal 36px 'Cookie', cursive;
+    font: normal 36px;
     margin: 0;
 }
 
